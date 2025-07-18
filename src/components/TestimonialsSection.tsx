@@ -44,7 +44,7 @@ const testimonials = [
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const whatsappMessage = encodeURIComponent("היי, ראיתי את הטסטימוניאלים ואני מעוניין לשמוע עוד");
-  const whatsappUrl = `https://wa.me/972123456789?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);

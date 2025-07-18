@@ -54,7 +54,7 @@ const services = [
 
 const ServicesSection = () => {
   const whatsappMessage = encodeURIComponent("היי, אני מעוניין לשמוע עוד על השירותים שלכם");
-  const whatsappUrl = `https://wa.me/972123456789?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   return (
     <section id="services" className="py-20 relative overflow-hidden">

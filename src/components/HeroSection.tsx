@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const whatsappMessage = encodeURIComponent("היי, התעניינתי בשירותי פרויקטים שאתם מציעים");
-  const whatsappUrl = `https://wa.me/972123456789?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const whatsappMessage = encodeURIComponent("היי, התעניינתי בשירותים שלכם");
-  const whatsappUrl = `https://wa.me/972123456789?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   useEffect(() => {
     const handleScroll = () => {

@@ -18,7 +18,7 @@ const ContactSection = () => {
   const { toast } = useToast();
 
   const whatsappMessage = encodeURIComponent("היי, אני מעוניין לקבל עוד מידע על השירותים שלכם");
-  const whatsappUrl = `https://wa.me/972123456789?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

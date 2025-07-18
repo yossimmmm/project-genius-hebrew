@@ -3,7 +3,7 @@ import { HeroButton } from "@/components/ui/hero-button";
 
 const Footer = () => {
   const whatsappMessage = encodeURIComponent("היי, התעניינתי בשירותים שלכם");
-  const whatsappUrl = `https://wa.me/972123456789?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
