@@ -89,7 +89,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">אימייל</h4>
-                  <p className="text-muted-foreground">מענה תוך שעות ספורות</p>
+                  <p className="text-muted-foreground">projectssosil@gmail.com</p>
                 </div>
               </div>
 
@@ -99,7 +99,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">זמני פעילות</h4>
-                  <p className="text-muted-foreground">ראשון-שישי: 8:00-22:00<br />שבת: 20:00-24:00</p>
+                  <p className="text-muted-foreground">24/7 - זמינים תמיד</p>
                 </div>
               </div>
 

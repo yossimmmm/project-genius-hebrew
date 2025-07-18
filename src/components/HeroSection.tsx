@@ -41,14 +41,14 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           
           {/* Stats Bar */}
-          <div className="flex flex-wrap justify-center gap-8 mb-8 opacity-0 animate-fadeInUp">
+          <div className="flex flex-wrap justify-center gap-8 mb-12 opacity-0 animate-fadeInUp">
             <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
               <Users className="w-5 h-5 text-primary" />
               <span className="text-white font-semibold">200+ לקוחות מרוצים</span>
             </div>
             <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
               <GraduationCap className="w-5 h-5 text-primary" />
-              <span className="text-white font-semibold">60+ סטודנטים שסיימו תואר</span>
+              <span className="text-white font-semibold">60+ סטודנטים שסיימו תואר איתנו</span>
             </div>
           </div>
 

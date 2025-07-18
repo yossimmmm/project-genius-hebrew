@@ -80,7 +80,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>מענה תוך שעות ספורות</span>
+                <span>projectssosil@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MessageCircle className="w-5 h-5 text-primary" />
@@ -92,9 +92,7 @@ const Footer = () => {
             <div className="mt-6">
               <h5 className="font-semibold mb-2">שעות פעילות</h5>
               <div className="text-sm text-muted-foreground space-y-1">
-                <div>ראשון-שישי: 8:00-22:00</div>
-                <div>שבת: 20:00-24:00</div>
-                <div className="text-primary font-medium">זמינות חירום: 24/7</div>
+                <div className="text-primary font-medium">24/7 - זמינים תמיד</div>
               </div>
             </div>
           </div>
