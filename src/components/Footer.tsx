@@ -20,7 +20,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold text-gradient mb-4">SOS פרויקטים</h3>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
               הפתרון המושלם לכל סטודנט - מתמחים בביצוע פרויקטים אקדמיים ברמה הגבוהה ביותר. 
-              עם מעל 200 לקוחות מרוצים ו-60 סטודנטים שסיימו תואר בהצלחה.
+              עם מעל 200 לקוחות מרוצים ו-60 סטודנטים שסיימו תואר איתנו בהצלחה.
             </p>
             
             {/* Quick Contact */}

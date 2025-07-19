@@ -166,7 +166,7 @@ const TestimonialsSection = () => {
           </div>
           <div className="text-center p-6 bg-card border border-border rounded-2xl hover-scale transition-all duration-300">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">60+</div>
-            <div className="text-muted-foreground">סטודנטים שסיימו תואר</div>
+            <div className="text-muted-foreground">סטודנטים שסיימו תואר איתנו</div>
           </div>
         </div>
 
