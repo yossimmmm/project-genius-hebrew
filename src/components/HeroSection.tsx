@@ -57,14 +57,14 @@ const HeroSection = () => {
             <span className="text-shimmer">הפתרון</span>{" "}
             <span className="text-white">המושלם</span>
             <br />
-            <span className="text-gradient">לכל פרויקט</span>
+            <span className="text-gradient animate-pulse">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-light opacity-0 animate-fadeInUp animate-delay-400 max-w-3xl mx-auto leading-relaxed">
             מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר
             <br />
-            <span className="text-primary font-semibold">עבודות גמר • תרגילים • קורסים • ליווי אישי</span>
+            <span className="text-primary font-semibold animate-fade-in hover-scale">עבודות גמר • תרגילים • קורסים • ליווי אישי</span>
           </p>
 
           {/* Action Buttons */}
