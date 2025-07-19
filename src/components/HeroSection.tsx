@@ -7,7 +7,7 @@ const HeroSection = () => {
   const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
       <div className="absolute inset-0 animated-gradient opacity-90"></div>
       
