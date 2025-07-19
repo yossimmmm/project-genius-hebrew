@@ -17,7 +17,7 @@ const Footer = () => {
           
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-gradient mb-4">פרויקטים Pro</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-4">SOS פרויקטים</h3>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
               הפתרון המושלם לכל סטודנט - מתמחים בביצוע פרויקטים אקדמיים ברמה הגבוהה ביותר. 
               עם מעל 200 לקוחות מרוצים ו-60 סטודנטים שסיימו תואר בהצלחה.
@@ -107,7 +107,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-sm text-muted-foreground text-center md:text-right">
               <p className="flex items-center gap-2 justify-center md:justify-start">
-                © 2024 פרויקטים Pro. כל הזכויות שמורות
+                © 2024 SOS פרויקטים. כל הזכויות שמורות
                 <Heart className="w-4 h-4 text-red-500" />
               </p>
             </div>
@@ -126,7 +126,7 @@ const Footer = () => {
           <div className="mt-4 pt-4 border-t border-border/50">
             <div className="text-center">
               <p className="text-xs text-muted-foreground">
-                פרויקטים Pro - הפתרון המקצועי לכל צורך אקדמי • שירות אמין ומהיר • תוצאות מובטחות
+                SOS פרויקטים - הפתרון המקצועי לכל צורך אקדמי • שירות אמין ומהיר • תוצאות מובטחות
               </p>
             </div>
           </div>

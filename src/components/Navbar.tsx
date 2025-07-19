@@ -40,7 +40,7 @@ const Navbar = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="text-2xl font-bold text-gradient hover:scale-105 transition-transform duration-300"
             >
-              פרויקטים Pro
+              SOS פרויקטים
             </button>
           </div>
 
