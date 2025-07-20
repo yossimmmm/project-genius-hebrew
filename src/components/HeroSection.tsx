@@ -55,9 +55,9 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight opacity-0 animate-fadeInUp animate-delay-200">
             <span className="text-shimmer">הפתרון</span>{" "}
-            <span className="text-white">המושלם</span>
+            <span className="text-white drop-shadow-lg">המושלם</span>
             <br />
-            <span className="text-white font-extrabold shadow-[0_0_40px_theme(colors.primary)] glow-primary">לכל פרויקט</span>
+            <span className="text-white font-extrabold shadow-[0_0_40px_theme(colors.primary)] glow-primary drop-shadow-[0_0_15px_rgba(255,255,255,0.9)] shadow-[0_0_30px_theme(colors.accent)] hover:text-accent transition-all duration-300">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
