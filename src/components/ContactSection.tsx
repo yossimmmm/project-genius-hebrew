@@ -22,34 +22,32 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const { supabase } = await import("@/integrations/supabase/client");
-      
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
-      });
-
-      if (error) {
-        throw error;
-      }
-
-      toast({
-        title: "הודעה נשלחה בהצלחה!",
-        description: "נחזור אליך בהקדם האפשרי",
-      });
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      toast({
-        title: "שגיאה בשליחת ההודעה",
-        description: "אנא נסו שוב או צרו קשר בוואטסאפ",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
+    
+    // Create WhatsApp message from form data
+    let whatsappMessage = `היי, אני רוצה לקבל עוד מידע על השירותים שלכם\n\n`;
+    whatsappMessage += `שם: ${formData.name}\n`;
+    whatsappMessage += `אימייל: ${formData.email}\n`;
+    if (formData.phone) {
+      whatsappMessage += `טלפון: ${formData.phone}\n`;
     }
+    if (formData.subject) {
+      whatsappMessage += `נושא הפרויקט: ${formData.subject}\n`;
+    }
+    whatsappMessage += `פרטים נוספים: ${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappContactUrl = `https://wa.me/972509888175?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappContactUrl, '_blank');
+    
+    // Show success message and reset form
+    toast({
+      title: "מעביר לוואטסאפ...",
+      description: "ההודעה שלך מוכנה לשליחה",
+    });
+    
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -224,18 +222,13 @@ const ContactSection = () => {
               <HeroButton 
                 type="submit" 
                 variant="hero" 
-                size="lg" 
-                disabled={isSubmitting}
+                size="lg"
                 className="w-full group"
               >
-                {isSubmitting ? (
-                  <span>שולח הודעה...</span>
-                ) : (
-                  <span className="flex items-center justify-center gap-3">
-                    שלח הודעה
-                    <Send className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
-                  </span>
-                )}
+                <span className="flex items-center justify-center gap-3">
+                  שלח הודעה
+                  <Send className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
+                </span>
               </HeroButton>
             </form>
 
