@@ -9,7 +9,19 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
-      <div className="absolute inset-0 animated-gradient opacity-90"></div>
+      <div className="absolute inset-0 animated-gradient breathing-bg opacity-90"></div>
+      
+      {/* Floating Particles */}
+      <div className="particle-bg">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
       
       {/* Background Image Overlay */}
       <div 
