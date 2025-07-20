@@ -57,7 +57,7 @@ const HeroSection = () => {
             <span className="text-shimmer">הפתרון</span>{" "}
             <span className="text-white">המושלם</span>
             <br />
-            <span className="text-white font-extrabold drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] shadow-[0_0_40px_theme(colors.primary)] glow-primary">לכל פרויקט</span>
+            <span className="text-white font-extrabold shadow-[0_0_40px_theme(colors.primary)] glow-primary">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
