@@ -11,32 +11,17 @@ const HeroSection = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 animated-gradient breathing-bg opacity-90"></div>
       
-      {/* Full Animated Background System */}
+      {/* Animated Wave Background */}
+      <div className="wave-bg"></div>
       
-      {/* Floating Particles */}
-      <div className="particle-bg">
-        {Array.from({ length: 20 }, (_, i) => (
-          <div key={i} className="particle"></div>
-        ))}
-      </div>
+      {/* Animated Grid Pattern */}
+      <div className="grid-bg"></div>
       
-      {/* Geometric Shapes */}
-      <div className="geometric-bg">
-        <div className="geometric-shape shape-1"></div>
-        <div className="geometric-shape shape-2"></div>
-        <div className="geometric-shape shape-3"></div>
-        <div className="geometric-shape shape-4"></div>
-        <div className="geometric-shape shape-5"></div>
-        <div className="geometric-shape shape-6"></div>
-      </div>
-      
-      {/* Light Beams */}
-      <div className="light-beams">
-        <div className="light-beam beam-1"></div>
-        <div className="light-beam beam-2"></div>
-        <div className="light-beam beam-3"></div>
-        <div className="light-beam beam-4"></div>
-        <div className="light-beam beam-5"></div>
+      {/* Morphing Blobs */}
+      <div className="blob-bg">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+        <div className="blob blob-3"></div>
       </div>
       
       {/* Background Image Overlay */}
