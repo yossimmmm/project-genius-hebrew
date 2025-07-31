@@ -464,121 +464,97 @@ All colors MUST be HSL.
     }
   }
 
-  /* Hero text reveal animations */
-  .hero-text-reveal {
-    opacity: 0;
-    transform: translateY(50px) scale(0.9);
-    animation: heroTextReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
-  }
-
-  .hero-text-reveal-delay {
+  /* iOS-style animations */
+  .ios-text-reveal {
     opacity: 0;
     transform: translateY(30px);
-    animation: heroTextReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards;
+    animation: iosTextReveal 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s forwards;
   }
 
-  @keyframes heroTextReveal {
+  .ios-text-reveal-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: iosTextReveal 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6s forwards;
+  }
+
+  .ios-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: iosFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
+  }
+
+  .ios-fade-up-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: iosFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.8s forwards;
+  }
+
+  .ios-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .ios-card:hover {
+    transform: translateY(-2px);
+    backdrop-filter: blur(20px);
+  }
+
+  .ios-button-primary {
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .ios-button-primary:hover {
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  .ios-button-secondary {
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .ios-button-secondary:hover {
+    transform: translateY(-1px);
+    backdrop-filter: blur(20px);
+  }
+
+  /* Animated background image */
+  .bg-parallax {
+    animation: parallaxMove 20s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes iosTextReveal {
     0% {
       opacity: 0;
-      transform: translateY(50px) scale(0.9);
-      filter: blur(10px);
-    }
-    50% {
-      opacity: 0.7;
-      transform: translateY(10px) scale(0.95);
-      filter: blur(5px);
+      transform: translateY(30px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0) scale(1);
-      filter: blur(0);
+      transform: translateY(0);
     }
   }
 
-  /* Falling particles background */
-  .falling-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: hsl(var(--primary));
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: fallDown 8s linear infinite;
-  }
-
-  .particle-1 {
-    left: 10%;
-    animation-delay: 0s;
-    animation-duration: 8s;
-  }
-
-  .particle-2 {
-    left: 20%;
-    animation-delay: 1s;
-    animation-duration: 9s;
-    background: hsl(var(--primary-variant));
-  }
-
-  .particle-3 {
-    left: 30%;
-    animation-delay: 2s;
-    animation-duration: 7s;
-  }
-
-  .particle-4 {
-    left: 40%;
-    animation-delay: 3s;
-    animation-duration: 10s;
-    background: hsl(var(--accent));
-  }
-
-  .particle:nth-child(2n) {
-    left: 50%;
-    animation-delay: 1.5s;
-  }
-
-  .particle:nth-child(3n) {
-    left: 60%;
-    animation-delay: 2.5s;
-  }
-
-  .particle:nth-child(4n) {
-    left: 70%;
-    animation-delay: 3.5s;
-  }
-
-  .particle:nth-child(5n) {
-    left: 80%;
-    animation-delay: 4.5s;
-  }
-
-  .particle:nth-child(6n) {
-    left: 90%;
-    animation-delay: 5.5s;
-  }
-
-  @keyframes fallDown {
+  @keyframes iosFadeUp {
     0% {
-      transform: translateY(-100vh) translateX(0);
       opacity: 0;
-    }
-    10% {
-      opacity: 0.6;
-    }
-    90% {
-      opacity: 0.6;
+      transform: translateY(20px);
     }
     100% {
-      transform: translateY(100vh) translateX(50px);
-      opacity: 0;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes parallaxMove {
+    0%, 100% {
+      transform: scale(1) translateY(0);
+    }
+    25% {
+      transform: scale(1.05) translateY(-10px);
+    }
+    50% {
+      transform: scale(1.02) translateY(5px);
+    }
+    75% {
+      transform: scale(1.03) translateY(-5px);
     }
   }
 }

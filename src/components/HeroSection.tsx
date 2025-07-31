@@ -31,9 +31,9 @@ const HeroSection = () => {
         <div className="blob blob-3"></div>
       </div>
       
-      {/* Background Image Overlay */}
+      {/* Animated Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 bg-parallax"
         style={{
           backgroundImage: `url(${heroImage})`
         }}
@@ -61,12 +61,12 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           
           {/* Stats Bar */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12 opacity-0 animate-fadeInUp">
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+          <div className="flex flex-wrap justify-center gap-8 mb-12 ios-fade-up">
+            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 ios-card">
               <Users className="w-5 h-5 text-primary" />
               <span className="text-white font-semibold">200+ לקוחות מרוצים</span>
             </div>
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 ios-card">
               <GraduationCap className="w-5 h-5 text-primary" />
               <span className="text-white font-semibold">60+ סטודנטים שסיימו תואר איתנו</span>
             </div>
@@ -74,9 +74,9 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="hero-text-reveal text-shimmer">הפתרון המושלם</span>
+            <span className="ios-text-reveal text-shimmer">הפתרון המושלם</span>
             <br />
-            <span className="hero-text-reveal-delay text-white font-bold">לכל פרויקט</span>
+            <span className="ios-text-reveal-delay text-white font-bold">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
@@ -93,12 +93,12 @@ const HeroSection = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0 animate-fadeInUp animate-delay-600">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center ios-fade-up-delay">
             <HeroButton 
               variant="glow" 
               size="xl"
               onClick={() => window.open(whatsappUrl, '_blank')}
-              className="group shadow-lg hover:shadow-primary/20"
+              className="group shadow-lg hover:shadow-primary/20 ios-button-primary"
             >
               <span className="flex items-center gap-3">
                 בואו נתחיל עכשיו
@@ -110,7 +110,7 @@ const HeroSection = () => {
               variant="outline" 
               size="xl"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="backdrop-blur-sm border-white/30 text-white hover:bg-white/10"
+              className="backdrop-blur-sm border-white/30 text-white hover:bg-white/10 ios-button-secondary"
             >
               גלה את השירותים
             </HeroButton>
