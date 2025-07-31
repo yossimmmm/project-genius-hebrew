@@ -11,6 +11,13 @@ const HeroSection = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 animated-gradient breathing-bg opacity-90"></div>
       
+      {/* Falling Particles Background */}
+      <div className="falling-particles">
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className={`particle particle-${i % 4 + 1}`}></div>
+        ))}
+      </div>
+      
       {/* Animated Wave Background */}
       <div className="wave-bg"></div>
       
@@ -66,10 +73,10 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight opacity-0 animate-fadeInUp animate-delay-200">
-            <span className="bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">הפתרון המושלם</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <span className="hero-text-reveal text-shimmer">הפתרון המושלם</span>
             <br />
-            <span className="text-white font-bold">לכל פרויקט</span>
+            <span className="hero-text-reveal-delay text-white font-bold">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
