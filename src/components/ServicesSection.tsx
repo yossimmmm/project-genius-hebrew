@@ -79,42 +79,26 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover-scale transition-all duration-300 hover:border-primary/50 hover:glow-primary"
-              style={{
-                animationDelay: `${index * 0.1}s`
-              }}
+              className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card hover:border-primary/30 transition-all duration-300"
             >
               {/* Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div className="flex justify-center mb-3">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <service.icon className="w-5 h-5 text-primary" />
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-center mb-4 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-sm font-semibold text-center mb-2 text-foreground">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-center mb-6 leading-relaxed">
+              <p className="text-xs text-muted-foreground text-center leading-snug">
                 {service.description}
               </p>
-
-              {/* Features */}
-              <ul className="space-y-3">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Hover Effect */}
-              <div className="absolute inset-0 gradient-bg opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300"></div>
             </div>
           ))}
         </div>

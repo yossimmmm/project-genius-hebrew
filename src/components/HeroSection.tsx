@@ -66,19 +66,24 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight opacity-0 animate-fadeInUp animate-delay-200">
-            <span className="text-shimmer">הפתרון</span>{" "}
-            <span className="text-white drop-shadow-lg">המושלם</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight opacity-0 animate-fadeInUp animate-delay-200">
+            <span className="bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">הפתרון המושלם</span>
             <br />
-            <span className="text-white font-extrabold shadow-[0_0_40px_theme(colors.primary)] glow-primary drop-shadow-[0_0_15px_rgba(255,255,255,0.9)] shadow-[0_0_30px_theme(colors.accent)] hover:text-accent transition-all duration-300">לכל פרויקט</span>
+            <span className="text-white font-bold">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-light opacity-0 animate-fadeInUp animate-delay-400 max-w-3xl mx-auto leading-relaxed">
-            מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר
-            <br />
-            <span className="text-white font-bold drop-shadow-[0_0_15px_rgba(255,255,255,0.9)] shadow-[0_0_30px_theme(colors.accent)] hover:text-accent transition-all duration-300">עבודות גמר • תרגילים • קורסים • ליווי אישי</span>
-          </p>
+          <div className="space-y-4 mb-8 opacity-0 animate-fadeInUp animate-delay-400">
+            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+              מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">עבודות גמר</span>
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">תרגילים</span>
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">קורסים</span>
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">ליווי אישי</span>
+            </div>
+          </div>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0 animate-fadeInUp animate-delay-600">
@@ -86,7 +91,7 @@ const HeroSection = () => {
               variant="glow" 
               size="xl"
               onClick={() => window.open(whatsappUrl, '_blank')}
-              className="group"
+              className="group shadow-lg hover:shadow-primary/20"
             >
               <span className="flex items-center gap-3">
                 בואו נתחיל עכשיו
@@ -121,7 +126,7 @@ const HeroSection = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fadeInUp animate-delay-700">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

@@ -171,7 +171,7 @@ const AboutSection = () => {
             variant="glow" 
             size="xl"
             onClick={() => window.open(whatsappUrl, '_blank')}
-            className="animate-pulse hover:animate-none"
+            className="shadow-lg hover:shadow-primary/20 transition-shadow duration-300"
           >
             התחילו את הפרויקט שלכם עכשיו
           </HeroButton>
