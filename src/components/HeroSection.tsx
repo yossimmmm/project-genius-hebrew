@@ -81,21 +81,17 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Main Professional Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-inter">
-            <span className="text-white font-bold ios-text-reveal">פתרונות אקדמיים</span>
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight font-inter">
+            <span className="text-white font-bold ios-text-reveal">הפתרון המושלם</span>
             <br />
-            <span className="ios-text-reveal-delay text-white font-bold">מותאמים אישית</span>
-            <br />
-            <span className="ios-text-reveal text-gray-200 text-2xl md:text-3xl lg:text-4xl font-medium mt-2 block">
-              מהירים, מקצועיים, ובסטנדרט הגבוה ביותר
-            </span>
+            <span className="ios-text-reveal-delay text-white font-bold">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
           <div className="space-y-4 mb-8 ios-fade-up">
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר
+              מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר - איכות מקצועית, מסירה בזמן
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base ios-stagger-enter">
               <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-3">עבודות גמר</span>

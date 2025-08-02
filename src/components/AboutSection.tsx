@@ -60,11 +60,11 @@ const AboutSection = () => {
         {/* Header */}
         <div className="text-center mb-20 ios-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 font-inter">
-            תשאירו את כאב הראש ועבודה השחורה לנו
+            למה סטודנטים בוחרים בנו?
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
-            SOS Projects הוקמה כדי לעזור לסטודנטים לסיים פרויקטים, מבחנים, משימות קודינג ועבודות אקדמיות באיכות גבוהה. 
-            אנחנו כאן כדי להפוך את הלימודים שלכם לפשוטים יותר ומוצלחים יותר.
+            SOS Projects מתמחה בסיוע לסטודנטים להשיג הצלחה אקדמית באמצעות פתרונות מקצועיים ומותאמים אישית. 
+            אנחנו כאן כדי להפוך את המסע האקדמי שלכם לקל יותר ומוצלח יותר.
           </p>
         </div>
 

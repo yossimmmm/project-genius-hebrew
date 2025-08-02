@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-2xl font-bold text-gradient ios-button"
+              className="text-2xl font-bold text-white hover:text-primary transition-colors font-inter"
             >
               SOS פרויקטים
             </button>
@@ -48,25 +48,31 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8 space-x-reverse">
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-foreground hover:text-primary ios-nav font-medium"
+              className="text-white hover:text-primary transition-colors font-medium"
             >
               בית
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary ios-nav font-medium"
+              className="text-white hover:text-primary transition-colors font-medium"
             >
               שירותים
             </button>
             <button 
+              onClick={() => scrollToSection('portfolio')}
+              className="text-white hover:text-primary transition-colors font-medium"
+            >
+              דוגמאות עבודות
+            </button>
+            <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-foreground hover:text-primary ios-nav font-medium"
+              className="text-white hover:text-primary transition-colors font-medium"
             >
               ביקורות
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary ios-nav font-medium"
+              className="text-white hover:text-primary transition-colors font-medium"
             >
               צור קשר
             </button>
@@ -109,31 +115,37 @@ const Navbar = () => {
         <div className={`md:hidden ios-nav overflow-hidden ${
           isOpen ? 'max-h-96 opacity-100 ios-nav-enter' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-4 space-y-4 bg-background/95 backdrop-blur-lg rounded-b-2xl border border-border mt-2 ios-modal">
+          <div className="py-4 space-y-4 bg-background/95 backdrop-blur-lg rounded-b-2xl border border-border mt-2">
             <button 
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setIsOpen(false);
               }}
-              className="block w-full text-right px-4 py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="block w-full text-right px-4 py-2 text-white hover:text-primary transition-colors duration-300 font-medium"
             >
               בית
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="block w-full text-right px-4 py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="block w-full text-right px-4 py-2 text-white hover:text-primary transition-colors duration-300 font-medium"
             >
               שירותים
             </button>
             <button 
+              onClick={() => scrollToSection('portfolio')}
+              className="block w-full text-right px-4 py-2 text-white hover:text-primary transition-colors duration-300 font-medium"
+            >
+              דוגמאות עבודות
+            </button>
+            <button 
               onClick={() => scrollToSection('testimonials')}
-              className="block w-full text-right px-4 py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="block w-full text-right px-4 py-2 text-white hover:text-primary transition-colors duration-300 font-medium"
             >
               ביקורות
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-right px-4 py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="block w-full text-right px-4 py-2 text-white hover:text-primary transition-colors duration-300 font-medium"
             >
               צור קשר
             </button>
