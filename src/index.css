@@ -2,109 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Modern Israeli tech startup colors */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    /* Tech gradient primary - Blue to Purple */
-    --primary: 259 100% 65%;
-    --primary-foreground: 0 0% 98%;
-    --primary-variant: 220 100% 60%;
-
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 10% 3.9%;
-
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-
-    --accent: 259 100% 65%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 259 100% 65%;
-
-    --radius: 0.75rem;
-
-    /* Custom gradients for tech vibes */
-    --gradient-primary: linear-gradient(135deg, hsl(259 100% 65%), hsl(220 100% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220 100% 60%), hsl(259 100% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(259 100% 65%) 0%, hsl(220 100% 60%) 50%, hsl(280 100% 70%) 100%);
+    /* Premium Brand Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 222 22% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 22% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 22% 10%;
     
-    /* Animations and effects */
-    --glow-primary: 0 0 40px hsl(259 100% 65% / 0.3);
-    --glow-secondary: 0 0 40px hsl(220 100% 60% / 0.3);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Primary - Professional Purple */
+    --primary: 259 92% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 259 92% 75%;
+    --primary-soft: 259 40% 95%;
+    
+    /* Secondary - Trust Blue */
+    --secondary: 220 91% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 220 91% 75%;
+    --secondary-soft: 220 40% 95%;
+    
+    /* Neutral System */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 9% 9%;
+    
+    /* Semantic Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* UI Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 259 92% 65%;
+    --radius: 0.75rem;
+    
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-premium: linear-gradient(135deg, hsl(259 92% 65%), hsl(220 91% 65%), hsl(280 80% 70%));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--primary-soft)), hsl(var(--secondary-soft)));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(220 14% 0% / 0.1);
+    --shadow-medium: 0 4px 16px -4px hsl(220 14% 0% / 0.15);
+    --shadow-large: 0 8px 32px -8px hsl(220 14% 0% / 0.2);
+    --shadow-glow: 0 0 32px hsl(var(--primary) / 0.25);
+    
+    /* Apple-inspired easing */
+    --ios-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ios-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 22% 6%;
     --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
+    --card: 222 22% 8%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 22% 8%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
+    --muted: 222 22% 12%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 222 22% 12%;
     --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 222 22% 15%;
+    --input: 222 22% 15%;
   }
 }
 
@@ -115,712 +83,196 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Inter', sans-serif;
     direction: rtl;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
   }
 }
 
 @layer components {
-  /* Hebrew RTL text utilities */
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
-  }
+  /* ====== PREMIUM BACKGROUNDS ====== */
   
-  .gradient-bg {
-    background-image: var(--gradient-primary);
-  }
-  
-  .hero-gradient {
-    background-image: var(--gradient-hero);
-  }
-  
-  .glow-primary {
-    box-shadow: var(--glow-primary);
-  }
-  
-  .glow-secondary {
-    box-shadow: var(--glow-secondary);
-  }
-  
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-  
-  .transition-bounce {
-    transition: var(--transition-bounce);
-  }
-  
-  /* ====== PREMIUM APPLE-INSPIRED BACKGROUNDS ====== */
-  
-  /* Main Animated Gradient - Apple Style */
-  .animated-gradient {
-    background: linear-gradient(135deg, 
-      #0F172A, 
-      #1E293B, 
-      #334155, 
-      #475569);
+  /* Main Dynamic Gradient - Premium Apple Style */
+  .premium-gradient {
+    background: linear-gradient(-45deg, 
+      #667eea 0%, 
+      #764ba2 25%, 
+      #667eea 50%, 
+      #f093fb 75%, 
+      #f5576c 100%);
     background-size: 400% 400%;
-    animation: appleGradientFlow 30s ease-in-out infinite;
+    animation: premiumFlow 20s ease-in-out infinite;
   }
   
-  /* Premium Fluid Gradient */
-  .apple-fluid-bg {
-    background: 
-      radial-gradient(circle at 20% 20%, rgba(139, 69, 196, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 80% 40%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, rgba(167, 139, 250, 0.06) 0%, transparent 60%),
-      radial-gradient(circle at 90% 90%, rgba(99, 102, 241, 0.04) 0%, transparent 40%);
-    animation: fluidMovement 35s ease-in-out infinite;
-  }
-  
-  /* Subtle Overlay Gradient */
-  .apple-overlay {
-    background: linear-gradient(45deg, 
-      rgba(139, 69, 196, 0.03), 
-      transparent 30%, 
-      rgba(59, 130, 246, 0.02) 60%, 
-      transparent);
-    background-size: 200% 200%;
-    animation: overlayShift 25s linear infinite;
-  }
-  
-  /* Interactive Gradient (responds to scroll/mouse) */
-  .interactive-gradient {
-    background: 
-      radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-        hsl(259 100% 65% / 0.06) 0%, 
-        transparent 60%),
-      linear-gradient(135deg, 
-        hsl(220 100% 60% / 0.02), 
-        hsl(280 100% 70% / 0.01));
-    transition: all 0.3s var(--ios-ease);
-  }
-  
-  /* Animated wave background */
-  .wave-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, 
-      hsl(259 100% 65% / 0.1), 
-      hsl(220 100% 60% / 0.1), 
-      hsl(280 100% 70% / 0.1),
-      hsl(300 80% 65% / 0.1));
-    background-size: 400% 400%;
-    animation: waveMove 15s ease infinite;
-  }
-  
-  .wave-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 98px,
-      hsl(259 100% 65% / 0.05) 100px,
-      hsl(259 100% 65% / 0.05) 102px
-    );
-    animation: slideLines 20s linear infinite;
-  }
-  
-  .wave-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 148px,
-      hsl(220 100% 60% / 0.03) 150px,
-      hsl(220 100% 60% / 0.03) 152px
-    );
-    animation: slideDiagonal 25s linear infinite reverse;
-  }
-  
-  /* Animated grid pattern */
-  .grid-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(hsl(259 100% 65% / 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(259 100% 65% / 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: gridMove 30s linear infinite;
-  }
-  
-  /* Morphing blob background */
-  .blob-bg {
+  /* Elegant Floating Particles */
+  .floating-particles {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 1;
   }
   
-  .blob {
+  .particle {
     position: absolute;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.4), transparent);
     border-radius: 50%;
-    filter: blur(40px);
-    mix-blend-mode: multiply;
-    animation: morphBlob 20s ease-in-out infinite;
+    animation: floatUp 12s linear infinite;
   }
   
-  .blob-1 {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, hsl(259 100% 65% / 0.3), transparent);
-    top: 20%;
-    left: 20%;
-    animation-delay: 0s;
+  .particle:nth-child(1) {
+    width: 8px; height: 8px;
+    left: 10%; animation-delay: 0s;
   }
   
-  .blob-2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, hsl(220 100% 60% / 0.3), transparent);
-    top: 60%;
-    right: 20%;
-    animation-delay: 7s;
+  .particle:nth-child(2) {
+    width: 6px; height: 6px;
+    left: 20%; animation-delay: 2s;
   }
   
-  .blob-3 {
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, hsl(280 100% 70% / 0.3), transparent);
-    bottom: 30%;
-    left: 10%;
-    animation-delay: 14s;
+  .particle:nth-child(3) {
+    width: 10px; height: 10px;
+    left: 70%; animation-delay: 4s;
   }
   
-  /* Breathing animation for background */
-  .breathing-bg {
-    animation: breathe 8s ease-in-out infinite;
+  .particle:nth-child(4) {
+    width: 4px; height: 4px;
+    left: 90%; animation-delay: 6s;
   }
   
-  /* Floating animation */
-  .float {
-    animation: float 6s ease-in-out infinite;
+  .particle:nth-child(5) {
+    width: 7px; height: 7px;
+    left: 50%; animation-delay: 8s;
   }
   
-  /* Pulse glow animation */
-  .pulse-glow {
-    animation: pulseGlow 2s ease-in-out infinite alternate;
+  /* Premium Card Design */
+  .premium-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.3s var(--ios-ease);
   }
   
-  /* Scale on hover */
-  .hover-scale {
-    @apply transition-transform duration-300 ease-out;
-  }
-  .hover-scale:hover {
-    transform: scale(1.05);
+  .premium-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-large);
   }
   
-  /* Text shimmer effect */
-  .text-shimmer {
-    background: linear-gradient(90deg, 
-      hsl(259 100% 65%) 0%, 
-      hsl(0 0% 100%) 50%, 
-      hsl(259 100% 65%) 100%);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 3s ease-in-out infinite;
+  /* Premium Button Variants */
+  .btn-premium {
+    @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(0);
   }
+  
+  .btn-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .btn-premium:active {
+    transform: translateY(0);
+  }
+  
+  /* Text Utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+  }
+  
+  /* Apple-inspired Animations */
+  .ios-fade-in {
+    animation: iosFadeIn 0.6s var(--ios-ease) forwards;
+  }
+  
+  .ios-slide-up {
+    animation: iosSlideUp 0.8s var(--ios-ease) forwards;
+  }
+  
+  .ios-scale-in {
+    animation: iosScaleIn 0.4s var(--ios-ease) forwards;
+  }
+  
+  /* Stagger Animations */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
 }
 
 @layer utilities {
-  /* ====== APPLE-INSPIRED BACKGROUND KEYFRAMES ====== */
+  /* ====== PREMIUM ANIMATIONS ====== */
   
-  /* Premium Apple Gradient Flow */
-  @keyframes appleGradientFlow {
-    0%, 100% { 
-      background-position: 0% 0%; 
-      filter: blur(0px);
-    }
-    25% { 
-      background-position: 100% 30%; 
-      filter: blur(0.5px);
-    }
-    50% { 
-      background-position: 70% 100%; 
-      filter: blur(0px);
-    }
-    75% { 
-      background-position: 30% 70%; 
-      filter: blur(0.5px);
-    }
-  }
-
-  /* Fluid Movement Animation */
-  @keyframes fluidMovement {
-    0%, 100% { 
-      transform: translateX(0) translateY(0) rotate(0deg); 
-    }
-    25% { 
-      transform: translateX(20px) translateY(-10px) rotate(1deg); 
-    }
-    50% { 
-      transform: translateX(-10px) translateY(15px) rotate(-0.5deg); 
-    }
-    75% { 
-      transform: translateX(15px) translateY(-5px) rotate(0.5deg); 
-    }
-  }
-
-  /* Subtle Overlay Shift */
-  @keyframes overlayShift {
-    0% { background-position: 0% 0%; }
-    33% { background-position: 100% 50%; }
-    66% { background-position: 50% 100%; }
-    100% { background-position: 0% 0%; }
-  }
-
-  /* Legacy gradient shift */
-  @keyframes gradientShift {
+  /* Apple-style Premium Gradient Flow */
+  @keyframes premiumFlow {
     0% { background-position: 0% 50%; }
-    25% { background-position: 100% 50%; }
-    50% { background-position: 0% 100%; }
-    75% { background-position: 100% 0%; }
+    50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
   
-  @keyframes floatParticle {
+  /* Elegant Particle Float */
+  @keyframes floatUp {
     0% {
-      transform: translateY(100vh) translateX(0px) scale(0);
+      transform: translateY(100vh) translateX(0) rotate(0deg);
       opacity: 0;
     }
     10% {
-      opacity: 1;
-      transform: translateY(90vh) translateX(0px) scale(1);
+      opacity: 0.8;
     }
     90% {
-      opacity: 1;
-      transform: translateY(-10vh) translateX(100px) scale(1);
+      opacity: 0.8;
     }
     100% {
-      transform: translateY(-20vh) translateX(200px) scale(0);
+      transform: translateY(-20vh) translateX(50px) rotate(180deg);
       opacity: 0;
     }
   }
   
-  @keyframes breathe {
-    0%, 100% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.02); opacity: 1; }
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-  }
-  
-  @keyframes pulseGlow {
-    from { box-shadow: 0 0 20px hsl(259 100% 65% / 0.3); }
-    to { box-shadow: 0 0 40px hsl(259 100% 65% / 0.7); }
-  }
-  
-  @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-  }
-  
-  @keyframes rotateFloat {
-    0% { transform: rotate(0deg) translateY(0px); }
-    25% { transform: rotate(90deg) translateY(-20px); }
-    50% { transform: rotate(180deg) translateY(-10px); }
-    75% { transform: rotate(270deg) translateY(-30px); }
-    100% { transform: rotate(360deg) translateY(0px); }
-  }
-  
-  @keyframes moveBeam {
-    0% { transform: translateX(-100px); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateX(100px); opacity: 0; }
-  }
-  
-  @keyframes waveMove {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 100% 50%; }
-    50% { background-position: 0% 100%; }
-    75% { background-position: 100% 0%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  @keyframes slideLines {
-    0% { transform: translateX(-100px); }
-    100% { transform: translateX(100px); }
-  }
-  
-  @keyframes slideDiagonal {
-    0% { transform: translateX(-100px) translateY(-100px); }
-    100% { transform: translateX(100px) translateY(100px); }
-  }
-  
-  @keyframes gridMove {
-    0% { background-position: 0 0; }
-    100% { background-position: 50px 50px; }
-  }
-  
-  @keyframes morphBlob {
-    0%, 100% { 
-      transform: translate(0, 0) scale(1); 
-      border-radius: 50%; 
-    }
-    25% { 
-      transform: translate(20px, -20px) scale(1.1); 
-      border-radius: 40% 60% 50% 50%; 
-    }
-    50% { 
-      transform: translate(-10px, 10px) scale(0.9); 
-      border-radius: 60% 40% 30% 70%; 
-    }
-    75% { 
-      transform: translate(-20px, -10px) scale(1.05); 
-      border-radius: 30% 70% 60% 40%; 
-    }
-  }
-  
-  @keyframes fadeInUp {
+  /* iOS-style Fade In */
+  @keyframes iosFadeIn {
     from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  
-  .animate-slideInRight {
-    animation: slideInRight 0.8s ease-out forwards;
-  }
-  
-  .animate-delay-200 {
-    animation-delay: 0.2s;
-  }
-  
-  .animate-delay-400 {
-    animation-delay: 0.4s;
-  }
-  
-  .animate-delay-600 {
-    animation-delay: 0.6s;
-  }
-
-  /* ====== PREMIUM iOS-STYLE ANIMATION SYSTEM ====== */
-  
-  /* Core iOS Animation Curves */
-  :root {
-    --ios-ease: cubic-bezier(0.25, 0.8, 0.25, 1);
-    --ios-spring: cubic-bezier(0.175, 0.885, 0.32, 1.175);
-    --ios-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-    --ios-natural: cubic-bezier(0.4, 0, 0.6, 1);
-  }
-
-  /* ====== KEYFRAME ANIMATIONS ====== */
-  
-  /* Page & Section Entry */
-  @keyframes ios-page-enter {
-    0% {
       opacity: 0;
       transform: translateY(20px);
     }
-    100% {
+    to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-
-  @keyframes ios-text-reveal {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-      filter: blur(1px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
-    }
-  }
-
-  @keyframes ios-scale-enter {
-    0% {
-      opacity: 0;
-      transform: scale(0.95) translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-  }
-
-  @keyframes ios-stagger-up {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Button & Interactive Animations */
-  @keyframes ios-button-press {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.97); }
-    100% { transform: scale(1); }
-  }
-
-  @keyframes ios-modal-enter {
-    0% {
-      opacity: 0;
-      transform: scale(0.9) translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-  }
-
-  @keyframes ios-nav-slide {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Background & Environmental Effects */
-  @keyframes ios-parallax-float {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    25% {
-      transform: translateY(-8px) translateX(4px);
-    }
-    50% {
-      transform: translateY(-4px) translateX(-4px);
-    }
-    75% {
-      transform: translateY(-12px) translateX(2px);
-    }
-  }
-
-  @keyframes ios-glow-pulse {
-    0%, 100% {
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
-    }
-    50% {
-      box-shadow: 0 0 30px hsl(var(--primary) / 0.4);
-    }
-  }
-
-  @keyframes ios-particle-drift {
-    0% {
-      transform: translateY(-100vh) rotate(0deg) translateX(0px);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0.6;
-    }
-    90% {
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateY(100vh) rotate(180deg) translateX(30px);
-      opacity: 0;
-    }
-  }
-
-  @keyframes ios-bg-parallax {
-    0%, 100% {
-      transform: scale(1) translateY(0px);
-    }
-    50% {
-      transform: scale(1.02) translateY(-5px);
-    }
-  }
-
-  /* ====== ANIMATION CLASSES ====== */
   
-  /* Page & Section Animations */
-  .ios-page-enter {
-    animation: ios-page-enter 0.6s var(--ios-ease) forwards;
+  /* iOS-style Slide Up */
+  @keyframes iosSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-
-  .ios-text-reveal {
-    opacity: 0;
-    animation: ios-text-reveal 0.8s var(--ios-ease) forwards;
+  
+  /* iOS-style Scale In */
+  @keyframes iosScaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
-
-  .ios-text-reveal-delay {
-    opacity: 0;
-    animation: ios-text-reveal 0.8s var(--ios-ease) 0.2s forwards;
+  
+  /* Utility Classes */
+  .max-w-readable {
+    max-width: 65ch;
   }
-
-  .ios-scale-enter {
-    opacity: 0;
-    animation: ios-scale-enter 0.6s var(--ios-ease) forwards;
-  }
-
-  .ios-stagger-enter {
-    opacity: 0;
-    animation: ios-stagger-up 0.6s var(--ios-ease) forwards;
-  }
-
-  /* Stagger delays for service cards */
-  .ios-stagger-1 { animation-delay: 0.1s; }
-  .ios-stagger-2 { animation-delay: 0.2s; }
-  .ios-stagger-3 { animation-delay: 0.3s; }
-  .ios-stagger-4 { animation-delay: 0.4s; }
-  .ios-stagger-5 { animation-delay: 0.5s; }
-  .ios-stagger-6 { animation-delay: 0.6s; }
-
-  /* Interactive Elements */
-  .ios-button {
-    transition: all 0.3s var(--ios-ease);
-    transform-origin: center;
-  }
-
-  .ios-button:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-  }
-
-  .ios-button:active {
-    animation: ios-button-press 0.15s var(--ios-ease);
-  }
-
-  .ios-card {
-    transition: all 0.4s var(--ios-ease);
-    transform-origin: center;
-  }
-
-  .ios-card:hover {
-    transform: scale(1.03) translateY(-4px);
-    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.15);
-  }
-
-  /* Navigation */
-  .ios-nav {
-    transition: all 0.3s var(--ios-smooth);
-  }
-
-  .ios-nav-enter {
-    animation: ios-nav-slide 0.3s var(--ios-spring) forwards;
-  }
-
-  /* Modal & Dialog */
-  .ios-modal {
-    animation: ios-modal-enter 0.3s var(--ios-spring) forwards;
-  }
-
-  /* Environmental Effects */
-  .ios-glow {
-    animation: ios-glow-pulse 4s ease-in-out infinite;
-  }
-
-  .ios-parallax {
-    animation: ios-parallax-float 15s ease-in-out infinite;
-  }
-
-  .ios-floating-icon {
-    animation: ios-parallax-float 8s ease-in-out infinite;
-  }
-
-  .ios-bg-parallax {
-    animation: ios-bg-parallax 25s ease-in-out infinite;
-  }
-
-  /* Particle System */
-  .ios-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .ios-particle {
-    position: absolute;
-    background: linear-gradient(45deg, hsl(var(--primary) / 0.08), hsl(var(--primary) / 0.04));
-    border-radius: 50%;
-    animation: ios-particle-drift linear infinite;
-  }
-
-  .ios-particle-1 {
-    width: 4px;
-    height: 4px;
-    left: 15%;
-    animation-duration: 12s;
-    animation-delay: 0s;
-  }
-
-  .ios-particle-2 {
-    width: 6px;
-    height: 6px;
-    left: 35%;
-    animation-duration: 15s;
-    animation-delay: 3s;
-  }
-
-  .ios-particle-3 {
-    width: 3px;
-    height: 3px;
-    left: 65%;
-    animation-duration: 10s;
-    animation-delay: 6s;
-  }
-
-  .ios-particle-4 {
-    width: 5px;
-    height: 5px;
-    left: 85%;
-    animation-duration: 18s;
-    animation-delay: 2s;
-  }
-
-  /* Scroll-triggered animations */
-  .ios-fade-up {
-    opacity: 0;
-    animation: ios-page-enter 0.8s var(--ios-ease) 0.2s forwards;
-  }
-
-  .ios-fade-up-delay {
-    opacity: 0;
-    animation: ios-page-enter 0.8s var(--ios-ease) 0.5s forwards;
-  }
-
-  /* Legacy support */
-  .animate-pulse {
-    animation: ios-glow-pulse 3s ease-in-out infinite;
+  
+  .text-balance {
+    text-wrap: balance;
   }
 }
