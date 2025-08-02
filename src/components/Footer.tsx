@@ -15,22 +15,22 @@ const Footer = () => {
       <div className="relative z-10 border-t border-border/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 py-20">
           {/* Top section with company info */}
-          <div className="text-center mb-16">
-            <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary-light bg-clip-text text-transparent">
+          <div className="text-center mb-20">
+            <h3 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-primary via-accent to-primary-light bg-clip-text text-transparent">
               SOS Projects
             </h3>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
               הפתרון המקצועי והאמין לכל הצרכים האקדמיים שלכם. 
               איכות ללא פשרות, מסירה בזמן ושירות אישי ברמה הגבוהה ביותר.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
             
             {/* Contact Info */}
-            <div className="space-y-6">
-              <h4 className="text-2xl font-bold text-foreground mb-6">יצירת קשר</h4>
-              <div className="space-y-4">
+            <div className="space-y-8">
+              <h4 className="text-2xl font-bold text-foreground mb-8">יצירת קשר</h4>
+              <div className="space-y-6">
                 <a 
                   href="tel:+972509888175" 
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-all duration-300 group"
@@ -54,13 +54,13 @@ const Footer = () => {
                 </a>
                 
                 <a 
-                  href="mailto:info@sosprojects.co.il" 
+                  href="mailto:projectssos@gmail.com" 
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-all duration-300 group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span className="text-lg">info@sosprojects.co.il</span>
+                  <span className="text-lg">projectssos@gmail.com</span>
                 </a>
               </div>
             </div>

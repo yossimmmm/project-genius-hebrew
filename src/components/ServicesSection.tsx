@@ -69,34 +69,34 @@ const ServicesSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 ios-page-enter">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 ios-text-reveal">
+        <div className="text-center mb-20 ios-page-enter">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 ios-text-reveal leading-tight">
             <span className="text-gradient">השירותים</span> שלנו
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed ios-text-reveal-delay">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed ios-text-reveal-delay font-light">
             פתרונות מקצועיים ומותאמים אישית לכל צורך אקדמי וטכנולוגי
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card hover:border-primary/30 ios-card ios-stagger-enter ios-stagger-${(index % 6) + 1}`}
+              className={`group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:bg-card hover:border-primary/30 ios-card ios-stagger-enter ios-stagger-${(index % 6) + 1}`}
             >
               {/* Icon */}
-              <div className="flex justify-center mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
-                  <service.icon className="w-5 h-5 text-primary transition-transform duration-300 group-hover:rotate-12" />
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                  <service.icon className="w-6 h-6 text-primary transition-transform duration-300 group-hover:rotate-12" />
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-sm font-semibold text-center mb-2 text-foreground">
+              <h3 className="text-base font-semibold text-center mb-3 text-foreground leading-tight">
                 {service.title}
               </h3>
-              <p className="text-xs text-muted-foreground text-center leading-snug">
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -104,12 +104,12 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-card border border-border rounded-3xl p-12 relative overflow-hidden ios-card ios-scale-enter" style={{ animationDelay: '0.8s' }}>
+        <div className="text-center bg-card border border-border rounded-3xl p-16 relative overflow-hidden ios-card ios-scale-enter" style={{ animationDelay: '0.8s' }}>
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 ios-text-reveal" style={{ animationDelay: '1s' }}>
+            <h3 className="text-4xl md:text-5xl font-bold mb-8 ios-text-reveal" style={{ animationDelay: '1s' }}>
               מוכנים להתחיל?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto ios-text-reveal-delay" style={{ animationDelay: '1.2s' }}>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto ios-text-reveal-delay leading-relaxed font-light" style={{ animationDelay: '1.2s' }}>
               צרו קשר עוד היום ותגלו איך אנחנו יכולים לעזור לכם להצליח
             </p>
             <div className="ios-fade-up" style={{ animationDelay: '1.4s' }}>
@@ -117,11 +117,11 @@ const ServicesSection = () => {
                 variant="whatsapp" 
                 size="xl"
                 onClick={() => window.open(whatsappUrl, '_blank')}
-                className="group ios-button"
+                className="group ios-button px-12 py-4"
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-4 text-xl font-semibold">
                   בואו נדבר בוואטסאפ
-                  <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
+                  <ArrowLeft className="w-7 h-7 group-hover:-translate-x-2 transition-transform duration-300" />
                 </span>
               </HeroButton>
             </div>

@@ -82,40 +82,38 @@ const HeroSection = () => {
           </div>
 
           {/* Main Professional Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-inter">
-            <span className="text-white font-bold ios-text-reveal">פתרונות אקדמיים</span>
-            <br />
-            <span className="ios-text-reveal-delay text-white font-bold">מותאמים אישית</span>
-            <br />
-            <span className="ios-text-reveal text-gray-200 text-2xl md:text-3xl lg:text-4xl font-medium mt-2 block">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight font-heebo">
+            <span className="text-white font-bold ios-text-reveal block">פתרונות אקדמיים</span>
+            <span className="ios-text-reveal-delay text-white font-bold block mt-2">מותאמים אישית</span>
+            <span className="ios-text-reveal text-gray-200 text-xl md:text-2xl lg:text-3xl font-normal mt-6 block leading-relaxed">
               מהירים, מקצועיים, ובסטנדרט הגבוה ביותר
             </span>
           </h1>
 
           {/* Subtitle */}
-          <div className="space-y-4 mb-8 ios-fade-up">
-            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+          <div className="space-y-6 mb-12 ios-fade-up">
+            <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed font-light">
               מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base ios-stagger-enter">
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-3">עבודות גמר</span>
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-4">תרגילים</span>
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-5">קורסים</span>
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-6">ליווי אישי</span>
+            <div className="flex flex-wrap justify-center gap-4 text-base md:text-lg ios-stagger-enter">
+              <span className="bg-primary/20 text-white px-5 py-2 rounded-full border border-primary/30 ios-stagger-3 backdrop-blur-sm">עבודות גמר</span>
+              <span className="bg-primary/20 text-white px-5 py-2 rounded-full border border-primary/30 ios-stagger-4 backdrop-blur-sm">תרגילים</span>
+              <span className="bg-primary/20 text-white px-5 py-2 rounded-full border border-primary/30 ios-stagger-5 backdrop-blur-sm">קורסים</span>
+              <span className="bg-primary/20 text-white px-5 py-2 rounded-full border border-primary/30 ios-stagger-6 backdrop-blur-sm">ליווי אישי</span>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center ios-fade-up-delay">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center ios-fade-up-delay">
             <HeroButton 
               variant="glow" 
               size="xl"
               onClick={() => window.open(whatsappUrl, '_blank')}
-              className="group shadow-lg hover:shadow-primary/20 ios-button"
+              className="group shadow-2xl hover:shadow-primary/30 ios-button px-12 py-4"
             >
-              <span className="flex items-center gap-3">
+              <span className="flex items-center gap-4 text-xl font-semibold">
                 בואו נתחיל עכשיו
-                <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
+                <ArrowLeft className="w-7 h-7 group-hover:-translate-x-2 transition-transform duration-300" />
               </span>
             </HeroButton>
             
@@ -123,7 +121,7 @@ const HeroSection = () => {
               variant="outline" 
               size="xl"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="backdrop-blur-sm border-white/30 text-white hover:bg-white/10 ios-button"
+              className="backdrop-blur-sm border-white/40 text-white hover:bg-white/15 ios-button px-12 py-4 text-xl"
             >
               גלה את השירותים
             </HeroButton>
