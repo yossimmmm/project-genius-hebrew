@@ -8,14 +8,24 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background font-heebo">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <TestimonialsSection />
-      <ContactSection />
-      <Footer />
+    <div className="min-h-screen bg-background font-heebo relative overflow-hidden">
+      {/* Premium Apple-inspired Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 animated-gradient"></div>
+        <div className="absolute inset-0 apple-fluid-bg"></div>
+        <div className="absolute inset-0 apple-overlay"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10">
+        <Navbar />
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <TestimonialsSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 };

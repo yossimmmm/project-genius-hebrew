@@ -8,8 +8,17 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 animated-gradient breathing-bg opacity-90"></div>
+      {/* Interactive Background Layer */}
+      <div 
+        className="absolute inset-0 interactive-gradient opacity-60"
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 100;
+          const y = ((e.clientY - rect.top) / rect.height) * 100;
+          e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
+          e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
+        }}
+      ></div>
       
       {/* iOS Particle System */}
       <div className="ios-particles">
