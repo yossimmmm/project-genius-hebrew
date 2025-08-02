@@ -74,7 +74,7 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="ios-text-reveal text-shimmer ios-glow">הפתרון המושלם</span>
+            <span className="text-white font-bold ios-text-reveal">הפתרון המושלם</span>
             <br />
             <span className="ios-text-reveal-delay text-white font-bold">לכל פרויקט</span>
           </h1>
