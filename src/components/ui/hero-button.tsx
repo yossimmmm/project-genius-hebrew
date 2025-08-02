@@ -11,7 +11,7 @@ const heroButtonVariants = cva(
         hero: "gradient-bg text-white hover:scale-105 hover:glow-primary font-bold shadow-lg transform transition-all duration-300 ease-out",
         whatsapp: "bg-green-500 text-white hover:bg-green-600 hover:scale-105 transition-all duration-300 shadow-lg",
         outline: "border border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300",
-        glow: "gradient-bg text-white hover:scale-110 pulse-glow font-bold text-shimmer"
+        glow: "gradient-bg text-white hover:scale-105 shadow-lg font-bold transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",
