@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 ios-nav ${
       isScrolled 
         ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg' 
         : 'bg-transparent'
@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-2xl font-bold text-gradient hover:scale-105 transition-transform duration-300"
+              className="text-2xl font-bold text-gradient ios-button"
             >
               SOS פרויקטים
             </button>
@@ -48,25 +48,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8 space-x-reverse">
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               בית
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               שירותים
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               ביקורות
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               צור קשר
             </button>
@@ -78,6 +78,7 @@ const Navbar = () => {
               variant="outline" 
               size="sm"
               onClick={() => scrollToSection('contact')}
+              className="ios-button"
             >
               <Phone className="w-4 h-4 ml-2" />
               צור קשר
@@ -86,6 +87,7 @@ const Navbar = () => {
               variant="whatsapp" 
               size="sm"
               onClick={() => window.open(whatsappUrl, '_blank')}
+              className="ios-button"
             >
               <MessageCircle className="w-4 h-4 ml-2" />
               וואטסאפ
@@ -96,7 +98,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-primary ios-nav"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -104,10 +106,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden ios-nav overflow-hidden ${
+          isOpen ? 'max-h-96 opacity-100 ios-nav-enter' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-4 space-y-4 bg-background/95 backdrop-blur-lg rounded-b-2xl border border-border mt-2">
+          <div className="py-4 space-y-4 bg-background/95 backdrop-blur-lg rounded-b-2xl border border-border mt-2 ios-modal">
             <button 
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -144,7 +146,7 @@ const Navbar = () => {
                   scrollToSection('contact');
                   setIsOpen(false);
                 }}
-                className="w-full"
+                className="w-full ios-button"
               >
                 <Phone className="w-4 h-4 ml-2" />
                 צור קשר
@@ -156,7 +158,7 @@ const Navbar = () => {
                   window.open(whatsappUrl, '_blank');
                   setIsOpen(false);
                 }}
-                className="w-full"
+                className="w-full ios-button"
               >
                 <MessageCircle className="w-4 h-4 ml-2" />
                 וואטסאפ

@@ -69,18 +69,18 @@ const TestimonialsSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+        <div className="text-center mb-16 ios-page-enter">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 ios-text-reveal">
             הלקוחות שלנו <span className="text-gradient">מספרים</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto ios-text-reveal-delay">
             ביקורות אמיתיות מסטודנטים שהצליחו איתנו
           </p>
         </div>
 
         {/* Main Testimonial Display */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-card border border-border rounded-3xl p-8 md:p-12 relative overflow-hidden hover-scale transition-all duration-500">
+        <div className="max-w-4xl mx-auto ios-scale-enter">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12 relative overflow-hidden ios-card transition-all duration-500">
             {/* Quote Icon */}
             <div className="absolute top-6 right-6 opacity-20">
               <Quote className="w-16 h-16 text-primary" />
@@ -124,7 +124,7 @@ const TestimonialsSection = () => {
             <div className="flex justify-center items-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
-                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-scale"
+                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 ios-button"
               >
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -146,7 +146,7 @@ const TestimonialsSection = () => {
 
               <button
                 onClick={nextTestimonial}
-                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-scale"
+                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 ios-button"
               >
                 <ArrowLeft className="w-5 h-5" />
               </button>
@@ -156,15 +156,15 @@ const TestimonialsSection = () => {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div className="text-center p-6 bg-card border border-border rounded-2xl hover-scale transition-all duration-300">
+          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card ios-stagger-enter ios-stagger-1">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">200+</div>
             <div className="text-muted-foreground">לקוחות מרוצים</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-2xl hover-scale transition-all duration-300">
+          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card ios-stagger-enter ios-stagger-2">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">4.9/5</div>
             <div className="text-muted-foreground">ממוצע ביקורות</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-2xl hover-scale transition-all duration-300">
+          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card ios-stagger-enter ios-stagger-3">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">60+</div>
             <div className="text-muted-foreground">סטודנטים שסיימו תואר איתנו</div>
           </div>
@@ -179,7 +179,7 @@ const TestimonialsSection = () => {
             variant="whatsapp" 
             size="xl"
             onClick={() => window.open(whatsappUrl, '_blank')}
-            className="group"
+            className="group ios-button"
           >
             <span className="flex items-center gap-3">
               בואו נתחיל את המסע שלך

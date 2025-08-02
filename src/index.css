@@ -450,89 +450,20 @@ All colors MUST be HSL.
     animation-delay: 0.6s;
   }
 
-  /* Professional animations - no blinking */
-  .animate-pulse {
-    animation: gentle-glow 3s ease-in-out infinite !important;
+  /* ====== PREMIUM iOS-STYLE ANIMATION SYSTEM ====== */
+  
+  /* Core iOS Animation Curves */
+  :root {
+    --ios-ease: cubic-bezier(0.25, 0.8, 0.25, 1);
+    --ios-spring: cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    --ios-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ios-natural: cubic-bezier(0.4, 0, 0.6, 1);
   }
 
-  @keyframes gentle-glow {
-    0%, 100% { 
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
-    }
-    50% { 
-      box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
-    }
-  }
-
-  /* iOS-style animations */
-  .ios-text-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: iosTextReveal 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s forwards;
-  }
-
-  .ios-text-reveal-delay {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: iosTextReveal 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6s forwards;
-  }
-
-  .ios-fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: iosFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
-  }
-
-  .ios-fade-up-delay {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: iosFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.8s forwards;
-  }
-
-  .ios-card {
-    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .ios-card:hover {
-    transform: translateY(-2px);
-    backdrop-filter: blur(20px);
-  }
-
-  .ios-button-primary {
-    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .ios-button-primary:hover {
-    transform: translateY(-1px) scale(1.02);
-  }
-
-  .ios-button-secondary {
-    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .ios-button-secondary:hover {
-    transform: translateY(-1px);
-    backdrop-filter: blur(20px);
-  }
-
-  /* Animated background image */
-  .bg-parallax {
-    animation: parallaxMove 20s ease-in-out infinite;
-    transform-origin: center;
-  }
-
-  @keyframes iosTextReveal {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes iosFadeUp {
+  /* ====== KEYFRAME ANIMATIONS ====== */
+  
+  /* Page & Section Entry */
+  @keyframes ios-page-enter {
     0% {
       opacity: 0;
       transform: translateY(20px);
@@ -543,18 +474,273 @@ All colors MUST be HSL.
     }
   }
 
-  @keyframes parallaxMove {
-    0%, 100% {
+  @keyframes ios-text-reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(1px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes ios-scale-enter {
+    0% {
+      opacity: 0;
+      transform: scale(0.95) translateY(20px);
+    }
+    100% {
+      opacity: 1;
       transform: scale(1) translateY(0);
     }
+  }
+
+  @keyframes ios-stagger-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Button & Interactive Animations */
+  @keyframes ios-button-press {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.97); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes ios-modal-enter {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes ios-nav-slide {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Background & Environmental Effects */
+  @keyframes ios-parallax-float {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
     25% {
-      transform: scale(1.05) translateY(-10px);
+      transform: translateY(-8px) translateX(4px);
     }
     50% {
-      transform: scale(1.02) translateY(5px);
+      transform: translateY(-4px) translateX(-4px);
     }
     75% {
-      transform: scale(1.03) translateY(-5px);
+      transform: translateY(-12px) translateX(2px);
     }
+  }
+
+  @keyframes ios-glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.4);
+    }
+  }
+
+  @keyframes ios-particle-drift {
+    0% {
+      transform: translateY(-100vh) rotate(0deg) translateX(0px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(100vh) rotate(180deg) translateX(30px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes ios-bg-parallax {
+    0%, 100% {
+      transform: scale(1) translateY(0px);
+    }
+    50% {
+      transform: scale(1.02) translateY(-5px);
+    }
+  }
+
+  /* ====== ANIMATION CLASSES ====== */
+  
+  /* Page & Section Animations */
+  .ios-page-enter {
+    animation: ios-page-enter 0.6s var(--ios-ease) forwards;
+  }
+
+  .ios-text-reveal {
+    opacity: 0;
+    animation: ios-text-reveal 0.8s var(--ios-ease) forwards;
+  }
+
+  .ios-text-reveal-delay {
+    opacity: 0;
+    animation: ios-text-reveal 0.8s var(--ios-ease) 0.2s forwards;
+  }
+
+  .ios-scale-enter {
+    opacity: 0;
+    animation: ios-scale-enter 0.6s var(--ios-ease) forwards;
+  }
+
+  .ios-stagger-enter {
+    opacity: 0;
+    animation: ios-stagger-up 0.6s var(--ios-ease) forwards;
+  }
+
+  /* Stagger delays for service cards */
+  .ios-stagger-1 { animation-delay: 0.1s; }
+  .ios-stagger-2 { animation-delay: 0.2s; }
+  .ios-stagger-3 { animation-delay: 0.3s; }
+  .ios-stagger-4 { animation-delay: 0.4s; }
+  .ios-stagger-5 { animation-delay: 0.5s; }
+  .ios-stagger-6 { animation-delay: 0.6s; }
+
+  /* Interactive Elements */
+  .ios-button {
+    transition: all 0.3s var(--ios-ease);
+    transform-origin: center;
+  }
+
+  .ios-button:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+  }
+
+  .ios-button:active {
+    animation: ios-button-press 0.15s var(--ios-ease);
+  }
+
+  .ios-card {
+    transition: all 0.4s var(--ios-ease);
+    transform-origin: center;
+  }
+
+  .ios-card:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.15);
+  }
+
+  /* Navigation */
+  .ios-nav {
+    transition: all 0.3s var(--ios-smooth);
+  }
+
+  .ios-nav-enter {
+    animation: ios-nav-slide 0.3s var(--ios-spring) forwards;
+  }
+
+  /* Modal & Dialog */
+  .ios-modal {
+    animation: ios-modal-enter 0.3s var(--ios-spring) forwards;
+  }
+
+  /* Environmental Effects */
+  .ios-glow {
+    animation: ios-glow-pulse 4s ease-in-out infinite;
+  }
+
+  .ios-parallax {
+    animation: ios-parallax-float 15s ease-in-out infinite;
+  }
+
+  .ios-floating-icon {
+    animation: ios-parallax-float 8s ease-in-out infinite;
+  }
+
+  .ios-bg-parallax {
+    animation: ios-bg-parallax 25s ease-in-out infinite;
+  }
+
+  /* Particle System */
+  .ios-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .ios-particle {
+    position: absolute;
+    background: linear-gradient(45deg, hsl(var(--primary) / 0.08), hsl(var(--primary) / 0.04));
+    border-radius: 50%;
+    animation: ios-particle-drift linear infinite;
+  }
+
+  .ios-particle-1 {
+    width: 4px;
+    height: 4px;
+    left: 15%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+  }
+
+  .ios-particle-2 {
+    width: 6px;
+    height: 6px;
+    left: 35%;
+    animation-duration: 15s;
+    animation-delay: 3s;
+  }
+
+  .ios-particle-3 {
+    width: 3px;
+    height: 3px;
+    left: 65%;
+    animation-duration: 10s;
+    animation-delay: 6s;
+  }
+
+  .ios-particle-4 {
+    width: 5px;
+    height: 5px;
+    left: 85%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+  }
+
+  /* Scroll-triggered animations */
+  .ios-fade-up {
+    opacity: 0;
+    animation: ios-page-enter 0.8s var(--ios-ease) 0.2s forwards;
+  }
+
+  .ios-fade-up-delay {
+    opacity: 0;
+    animation: ios-page-enter 0.8s var(--ios-ease) 0.5s forwards;
+  }
+
+  /* Legacy support */
+  .animate-pulse {
+    animation: ios-glow-pulse 3s ease-in-out infinite;
   }
 }

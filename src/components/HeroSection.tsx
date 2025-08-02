@@ -11,10 +11,10 @@ const HeroSection = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 animated-gradient breathing-bg opacity-90"></div>
       
-      {/* Falling Particles Background */}
-      <div className="falling-particles">
-        {[...Array(20)].map((_, i) => (
-          <div key={i} className={`particle particle-${i % 4 + 1}`}></div>
+      {/* iOS Particle System */}
+      <div className="ios-particles">
+        {[...Array(12)].map((_, i) => (
+          <div key={i} className={`ios-particle ios-particle-${i % 4 + 1}`}></div>
         ))}
       </div>
       
@@ -31,27 +31,27 @@ const HeroSection = () => {
         <div className="blob blob-3"></div>
       </div>
       
-      {/* Animated Background Image */}
+      {/* iOS Parallax Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 bg-parallax"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 ios-bg-parallax"
         style={{
           backgroundImage: `url(${heroImage})`
         }}
       ></div>
       
-      {/* Floating Elements */}
+      {/* iOS Floating Elements */}
       <div className="absolute top-20 left-10 opacity-30">
-        <div className="float animate-delay-200">
+        <div className="ios-floating-icon">
           <Star className="w-8 h-8 text-primary" />
         </div>
       </div>
       <div className="absolute top-40 right-20 opacity-30">
-        <div className="float animate-delay-400">
+        <div className="ios-floating-icon" style={{ animationDelay: '2s' }}>
           <GraduationCap className="w-10 h-10 text-primary-variant" />
         </div>
       </div>
       <div className="absolute bottom-20 left-20 opacity-30">
-        <div className="float animate-delay-600">
+        <div className="ios-floating-icon" style={{ animationDelay: '4s' }}>
           <Zap className="w-6 h-6 text-accent" />
         </div>
       </div>
@@ -61,12 +61,12 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           
           {/* Stats Bar */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12 ios-fade-up">
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 ios-card">
+          <div className="flex flex-wrap justify-center gap-8 mb-12 ios-scale-enter">
+            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 ios-card ios-stagger-1">
               <Users className="w-5 h-5 text-primary" />
               <span className="text-white font-semibold">200+ לקוחות מרוצים</span>
             </div>
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 ios-card">
+            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 ios-card ios-stagger-2">
               <GraduationCap className="w-5 h-5 text-primary" />
               <span className="text-white font-semibold">60+ סטודנטים שסיימו תואר איתנו</span>
             </div>
@@ -74,21 +74,21 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="ios-text-reveal text-shimmer">הפתרון המושלם</span>
+            <span className="ios-text-reveal text-shimmer ios-glow">הפתרון המושלם</span>
             <br />
             <span className="ios-text-reveal-delay text-white font-bold">לכל פרויקט</span>
           </h1>
 
           {/* Subtitle */}
-          <div className="space-y-4 mb-8 opacity-0 animate-fadeInUp animate-delay-400">
+          <div className="space-y-4 mb-8 ios-fade-up">
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
               מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">עבודות גמר</span>
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">תרגילים</span>
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">קורסים</span>
-              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30">ליווי אישי</span>
+            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base ios-stagger-enter">
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-3">עבודות גמר</span>
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-4">תרגילים</span>
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-5">קורסים</span>
+              <span className="bg-primary/20 text-white px-3 py-1 rounded-full border border-primary/30 ios-stagger-6">ליווי אישי</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ const HeroSection = () => {
               variant="glow" 
               size="xl"
               onClick={() => window.open(whatsappUrl, '_blank')}
-              className="group shadow-lg hover:shadow-primary/20 ios-button-primary"
+              className="group shadow-lg hover:shadow-primary/20 ios-button"
             >
               <span className="flex items-center gap-3">
                 בואו נתחיל עכשיו
@@ -110,18 +110,18 @@ const HeroSection = () => {
               variant="outline" 
               size="xl"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="backdrop-blur-sm border-white/30 text-white hover:bg-white/10 ios-button-secondary"
+              className="backdrop-blur-sm border-white/30 text-white hover:bg-white/10 ios-button"
             >
               גלה את השירותים
             </HeroButton>
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-12 opacity-0 animate-fadeInUp animate-delay-700">
+          <div className="mt-12 ios-scale-enter" style={{ animationDelay: '1.2s' }}>
             <p className="text-gray-300 mb-4">אמינות מוכחת</p>
             <div className="flex justify-center items-center gap-2">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400 transition-all duration-300 hover:scale-110" />
               ))}
               <span className="text-white font-semibold mr-2">4.9/5</span>
               <span className="text-gray-300">ממוצע ביקורות</span>
@@ -131,9 +131,9 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fadeInUp animate-delay-700">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 ios-scale-enter" style={{ animationDelay: '1.5s' }}>
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center ios-card">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 ios-glow"></div>
         </div>
       </div>
     </section>

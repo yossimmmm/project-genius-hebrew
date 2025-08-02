@@ -69,11 +69,11 @@ const ServicesSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+        <div className="text-center mb-16 ios-page-enter">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 ios-text-reveal">
             <span className="text-gradient">השירותים</span> שלנו
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed ios-text-reveal-delay">
             פתרונות מקצועיים ומותאמים אישית לכל צורך אקדמי וטכנולוגי
           </p>
         </div>
@@ -83,12 +83,12 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card hover:border-primary/30 transition-all duration-300"
+              className={`group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card hover:border-primary/30 ios-card ios-stagger-enter ios-stagger-${(index % 6) + 1}`}
             >
               {/* Icon */}
               <div className="flex justify-center mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                  <service.icon className="w-5 h-5 text-primary transition-transform duration-300 group-hover:rotate-12" />
                 </div>
               </div>
 
@@ -104,25 +104,27 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-card border border-border rounded-3xl p-12 relative overflow-hidden">
+        <div className="text-center bg-card border border-border rounded-3xl p-12 relative overflow-hidden ios-card ios-scale-enter" style={{ animationDelay: '0.8s' }}>
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 ios-text-reveal" style={{ animationDelay: '1s' }}>
               מוכנים להתחיל?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto ios-text-reveal-delay" style={{ animationDelay: '1.2s' }}>
               צרו קשר עוד היום ותגלו איך אנחנו יכולים לעזור לכם להצליח
             </p>
-            <HeroButton 
-              variant="whatsapp" 
-              size="xl"
-              onClick={() => window.open(whatsappUrl, '_blank')}
-              className="group"
-            >
-              <span className="flex items-center gap-3">
-                בואו נדבר בוואטסאפ
-                <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
-              </span>
-            </HeroButton>
+            <div className="ios-fade-up" style={{ animationDelay: '1.4s' }}>
+              <HeroButton 
+                variant="whatsapp" 
+                size="xl"
+                onClick={() => window.open(whatsappUrl, '_blank')}
+                className="group ios-button"
+              >
+                <span className="flex items-center gap-3">
+                  בואו נדבר בוואטסאפ
+                  <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
+                </span>
+              </HeroButton>
+            </div>
           </div>
           
           {/* Background Pattern */}
