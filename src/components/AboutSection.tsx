@@ -7,25 +7,25 @@ const AboutSection = () => {
 
   const processSteps = [
     {
-      icon: <Lightbulb className="w-12 h-12" />,
+      icon: <Lightbulb className="w-8 h-8" />,
       title: "פנייה",
       description: "שלחו לנו את פרטי הפרויקט שלכם (כל נושא או שפת תכנות)",
       number: "01"
     },
     {
-      icon: <Users className="w-12 h-12" />,
+      icon: <Users className="w-8 h-8" />,
       title: "התאמת מומחה",
       description: "אנחנו מתאימים מומחה מוכח בתחום שלכם (קודינג, הנדסה, עסקים וכו')",
       number: "02"
     },
     {
-      icon: <CheckCheck className="w-12 h-12" />,
+      icon: <CheckCheck className="w-8 h-8" />,
       title: "בדיקת איכות",
       description: "כל פרויקט עובר בדיקה כפולה ובדיקת גניבה ספרותית",
       number: "03"
     },
     {
-      icon: <Rocket className="w-12 h-12" />,
+      icon: <Rocket className="w-8 h-8" />,
       title: "מסירה",
       description: "בזמן, מוכן להגשה, ללא לחץ",
       number: "04"
