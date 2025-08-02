@@ -17,10 +17,11 @@ export default {
 				'2xl': '1400px'
 			}
 		},
-		extend: {
-			fontFamily: {
-				heebo: ['Heebo', 'sans-serif'],
-			},
+    extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'heebo': ['Heebo', 'sans-serif'],
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

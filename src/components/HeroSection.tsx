@@ -81,11 +81,15 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="text-white font-bold ios-text-reveal">הפתרון המושלם</span>
+          {/* Main Professional Headline */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-inter">
+            <span className="text-white font-bold ios-text-reveal">פתרונות אקדמיים</span>
             <br />
-            <span className="ios-text-reveal-delay text-white font-bold">לכל פרויקט</span>
+            <span className="ios-text-reveal-delay text-white font-bold">מותאמים אישית</span>
+            <br />
+            <span className="ios-text-reveal text-gray-200 text-2xl md:text-3xl lg:text-4xl font-medium mt-2 block">
+              מהירים, מקצועיים, ובסטנדרט הגבוה ביותר
+            </span>
           </h1>
 
           {/* Subtitle */}

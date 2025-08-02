@@ -52,19 +52,17 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-background/95 to-primary/5 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-grid-pattern"></div>
-      </div>
+    <section className="py-32 relative" id="about">
+      {/* Background Elements */}
+      <div className="absolute inset-0 apple-overlay opacity-20"></div>
       
-      <div className="container mx-auto px-4 relative">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mb-6">
+        <div className="text-center mb-20 ios-fade-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 font-inter">
             תשאירו את כאב הראש ועבודה השחורה לנו
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
             SOS Projects הוקמה כדי לעזור לסטודנטים לסיים פרויקטים, מבחנים, משימות קודינג ועבודות אקדמיות באיכות גבוהה. 
             אנחנו כאן כדי להפוך את הלימודים שלכם לפשוטים יותר ומוצלחים יותר.
           </p>
