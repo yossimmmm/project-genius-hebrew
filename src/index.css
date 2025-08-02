@@ -8,49 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern Israeli tech startup colors */
-    --background: 240 10% 3.9%;
+    /* Premium dark theme with rich gradients */
+    --background: 220 13% 9%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
+    --card: 220 13% 11%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 220 13% 11%;
     --popover-foreground: 0 0% 98%;
 
-    /* Tech gradient primary - Blue to Purple */
-    --primary: 259 100% 65%;
+    /* Premium purple-blue gradient system */
+    --primary: 259 94% 67%;
     --primary-foreground: 0 0% 98%;
-    --primary-variant: 220 100% 60%;
+    --primary-variant: 239 84% 67%;
+    --primary-light: 270 81% 75%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 10% 3.9%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220 13% 9%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 259 100% 65%;
+    --accent: 239 84% 67%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 259 100% 65%;
+    --border: 220 13% 18%;
+    --input: 220 13% 15%;
+    --ring: 259 94% 67%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom gradients for tech vibes */
-    --gradient-primary: linear-gradient(135deg, hsl(259 100% 65%), hsl(220 100% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220 100% 60%), hsl(259 100% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(259 100% 65%) 0%, hsl(220 100% 60%) 50%, hsl(280 100% 70%) 100%);
+    /* Premium gradients with depth */
+    --gradient-primary: linear-gradient(135deg, hsl(259 94% 67%), hsl(239 84% 67%));
+    --gradient-secondary: linear-gradient(135deg, hsl(239 84% 67%), hsl(270 81% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(259 94% 67%) 0%, hsl(239 84% 67%) 40%, hsl(270 81% 75%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(259 94% 67% / 0.1), hsl(239 84% 67% / 0.05));
+    --gradient-footer: linear-gradient(180deg, hsl(220 13% 9%) 0%, hsl(220 13% 6%) 100%);
     
-    /* Animations and effects */
-    --glow-primary: 0 0 40px hsl(259 100% 65% / 0.3);
-    --glow-secondary: 0 0 40px hsl(220 100% 60% / 0.3);
+    /* Premium shadows and effects */
+    --glow-primary: 0 0 50px hsl(259 94% 67% / 0.4);
+    --glow-secondary: 0 0 50px hsl(239 84% 67% / 0.3);
+    --shadow-elegant: 0 25px 50px -12px hsl(220 13% 0% / 0.25);
+    --shadow-glass: 0 8px 32px hsl(220 13% 0% / 0.3);
+    
+    /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-glass: all 0.2s cubic-bezier(0.4, 0, 1, 1);
 
     --sidebar-background: 0 0% 98%;
 

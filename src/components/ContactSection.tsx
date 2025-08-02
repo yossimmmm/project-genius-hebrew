@@ -59,10 +59,12 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/50 to-background"></div>
+      {/* Premium background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-muted/20"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.05),transparent_70%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--accent)/0.05),transparent_70%)]"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -149,9 +151,9 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-card border border-border rounded-3xl p-8">
-            <h3 className="text-2xl font-bold mb-6">שלחו הודעה</h3>
+          {/* Contact Form - Enhanced */}
+          <div className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-3xl p-8 shadow-2xl hover:shadow-primary/5 transition-all duration-500">
+            <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">שלחו הודעה</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
