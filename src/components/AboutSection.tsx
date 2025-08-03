@@ -1,31 +1,32 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { HeroButton } from "@/components/ui/hero-button";
 import { CheckCircle, Users, Clock, Shield, Lightbulb, FolderOpen, CheckCheck, Rocket } from "lucide-react";
 
 const AboutSection = () => {
-  const whatsappUrl = "https://wa.me/972123456789?text=שלום, אני מעוניין להתחיל פרויקט חדש";
+  const whatsappUrl = "https://wa.me/972509888175?text=שלום, אני מעוניין להתחיל פרויקט חדש";
 
   const processSteps = [
     {
-      icon: <Lightbulb className="w-8 h-8" />,
+      icon: <Lightbulb className="w-6 h-6" />,
       title: "פנייה",
       description: "שלחו לנו את פרטי הפרויקט שלכם (כל נושא או שפת תכנות)",
       number: "01"
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: "התאמת מומחה",
       description: "אנחנו מתאימים מומחה מוכח בתחום שלכם (קודינג, הנדסה, עסקים וכו')",
       number: "02"
     },
     {
-      icon: <CheckCheck className="w-8 h-8" />,
+      icon: <CheckCheck className="w-6 h-6" />,
       title: "בדיקת איכות",
       description: "כל פרויקט עובר בדיקה כפולה ובדיקת גניבה ספרותית",
       number: "03"
     },
     {
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <Rocket className="w-6 h-6" />,
       title: "מסירה",
       description: "בזמן, מוכן להגשה, ללא לחץ",
       number: "04"
@@ -83,7 +84,7 @@ const AboutSection = () => {
                       <span className="text-sm font-bold text-primary">{step.number}</span>
                     </div>
                     
-                    {/* Icon */}
+                    {/* Icon - Reduced size */}
                     <div className="text-primary mb-6 flex justify-center">
                       {step.icon}
                     </div>
@@ -157,7 +158,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action - Removed blinking */}
         <div className="text-center">
           <h3 className="text-2xl font-bold mb-6 text-foreground">
             מוכנים להתחיל?
