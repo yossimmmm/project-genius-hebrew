@@ -86,7 +86,7 @@ const AboutSection = () => {
                     
                     {/* Icon - Smaller size */}
                     <div className="text-primary mb-6 flex justify-center">
-                      <div className="w-8 h-8 flex items-center justify-center">
+                      <div className="w-6 h-6 flex items-center justify-center">
                         {step.icon}
                       </div>
                     </div>

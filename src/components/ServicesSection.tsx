@@ -59,13 +59,9 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
-      <div 
-        className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-10"
-        style={{
-          backgroundImage: `url(${servicesImage})`
-        }}
-      ></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/95 to-background"></div>
+      <div className="absolute inset-0 animated-gradient opacity-10"></div>
+      <div className="absolute inset-0 apple-overlay opacity-30"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -83,11 +79,11 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:bg-card hover:border-primary/30 ios-card ios-stagger-enter ios-stagger-${(index % 6) + 1}`}
+              className={`group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-3xl p-6 hover:bg-card hover:border-primary/30 ios-card ios-stagger-enter ios-stagger-${(index % 6) + 1} hover:shadow-xl hover:shadow-primary/10 transition-all duration-300`}
             >
               {/* Icon */}
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-full flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-300 group-hover:scale-105 shadow-lg shadow-primary/5">
                   <service.icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:rotate-6" />
                 </div>
               </div>
