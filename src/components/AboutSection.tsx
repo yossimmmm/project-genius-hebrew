@@ -84,9 +84,11 @@ const AboutSection = () => {
                       <span className="text-sm font-bold text-primary">{step.number}</span>
                     </div>
                     
-                    {/* Icon - Reduced size */}
+                    {/* Icon - Smaller size */}
                     <div className="text-primary mb-6 flex justify-center">
-                      {step.icon}
+                      <div className="w-8 h-8 flex items-center justify-center">
+                        {step.icon}
+                      </div>
                     </div>
                     
                     {/* Content */}
