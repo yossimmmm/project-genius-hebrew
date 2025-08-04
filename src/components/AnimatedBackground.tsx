@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import geometricBg from "@/assets/geometric-bg.jpg";
 
 /**
  * AnimatedBackground renders the luxurious animated gradient backdrop.
@@ -36,6 +37,11 @@ const AnimatedBackground = () => {
 
   return (
     <div ref={ref} className="absolute inset-0">
+      {/* iPhone X style geometric background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: `url(${geometricBg})` }}
+      />
       <div className="absolute inset-0 animated-gradient" />
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />
