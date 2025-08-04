@@ -30,6 +30,7 @@ export const useScrollAnimations = () => {
               el.classList.add(animation);
               el.removeAttribute("data-animate");
             }
+
             observer.unobserve(el);
           }
         });

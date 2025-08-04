@@ -12,6 +12,7 @@ const AnimatedBackground = () => {
     const el = ref.current;
     if (!el) return;
 
+
     const handleMouseMove = (e: MouseEvent) => {
       const rect = el.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -35,7 +36,11 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-
+    <div
+      ref={ref}
+      aria-hidden="true"
+      className="fixed inset-0 z-0 overflow-hidden pointer-events-none ios-bg-parallax"
+    >
       <div className="absolute inset-0 animated-gradient" />
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />
