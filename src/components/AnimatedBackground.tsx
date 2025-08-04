@@ -35,11 +35,7 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      aria-hidden="true"
-      className="fixed inset-0 z-0 overflow-hidden pointer-events-none ios-bg-parallax"
-    >
+
       <div className="absolute inset-0 animated-gradient" />
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />

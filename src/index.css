@@ -358,10 +358,6 @@ All colors MUST be HSL.
   [data-animate] {
     opacity: 0;
   }
-
-  [data-stagger] > * {
-    opacity: 0;
-  }
 }
 
 @layer utilities {
