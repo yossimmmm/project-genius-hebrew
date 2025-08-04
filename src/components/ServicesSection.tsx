@@ -99,43 +99,32 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-card border border-border rounded-3xl p-16 relative overflow-hidden ios-card ios-scale-enter" style={{ animationDelay: '0.8s' }}>
-          <div className="relative z-10">
-            <h3 className="text-4xl md:text-5xl font-bold mb-8 ios-text-reveal" style={{ animationDelay: '1s' }}>
-              מוכנים להתחיל?
-            </h3>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto ios-text-reveal-delay leading-relaxed font-light" style={{ animationDelay: '1.2s' }}>
-              צרו קשר עוד היום ותגלו איך אנחנו יכולים לעזור לכם להצליח
-            </p>
-            <div className="ios-fade-up" style={{ animationDelay: '1.4s' }}>
-              <HeroButton 
-                variant="whatsapp" 
-                size="xl"
-                onClick={() => window.open(whatsappUrl, '_blank')}
-                className="group ios-button px-12 py-4"
-              >
-                <span className="flex items-center gap-4 text-xl font-semibold">
-                  בואו נדבר בוואטסאפ
-                  <ArrowLeft className="w-7 h-7 group-hover:-translate-x-2 transition-transform duration-300" />
-                </span>
-              </HeroButton>
-            </div>
-          </div>
-          
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-4 left-4">
-              <Database className="w-8 h-8 text-primary" />
-            </div>
-            <div className="absolute top-4 right-4">
-              <Smartphone className="w-8 h-8 text-primary" />
-            </div>
-            <div className="absolute bottom-4 left-4">
-              <Code className="w-8 h-8 text-primary" />
-            </div>
-            <div className="absolute bottom-4 right-4">
-              <Globe className="w-8 h-8 text-primary" />
+        {/* CTA Section - Luxury Design */}
+        <div className="text-center relative">
+          <div className="bg-gradient-to-br from-card/90 via-card to-card/70 backdrop-blur-xl border border-primary/15 rounded-3xl p-16 relative overflow-hidden shadow-2xl ios-card ios-scale-enter" style={{ animationDelay: '0.8s' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-purple-500/3"></div>
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/5 rounded-full blur-3xl"></div>
+            <div className="relative z-10">
+              <h3 className="text-4xl md:text-5xl font-bold mb-8 ios-text-reveal bg-gradient-to-r from-primary via-primary to-purple-600 bg-clip-text text-transparent" style={{ animationDelay: '1s' }}>
+                מוכנים להתחיל?
+              </h3>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto ios-text-reveal-delay leading-relaxed font-light" style={{ animationDelay: '1.2s' }}>
+                צרו קשר עוד היום ותגלו איך אנחנו יכולים לעזור לכם להצליח
+              </p>
+              <div className="ios-fade-up" style={{ animationDelay: '1.4s' }}>
+                <HeroButton 
+                  variant="whatsapp" 
+                  size="xl"
+                  onClick={() => window.open(whatsappUrl, '_blank')}
+                  className="shadow-2xl hover:shadow-green-500/20 transition-all duration-500"
+                >
+                  <span className="flex items-center gap-3">
+                    💬 דבר איתנו בוואטסאפ
+                  </span>
+                </HeroButton>
+              </div>
             </div>
           </div>
         </div>

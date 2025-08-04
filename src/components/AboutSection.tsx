@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { HeroButton } from "@/components/ui/hero-button";
-import { CheckCircle, Users, Clock, Shield, Lightbulb, FolderOpen, CheckCheck, Rocket } from "lucide-react";
+import { CheckCircle, Users, Clock, Shield, Lightbulb, FolderOpen, CheckCheck, Rocket, ArrowLeft } from "lucide-react";
 
 const AboutSection = () => {
   const whatsappUrl = "https://wa.me/972509888175?text=שלום, אני מעוניין להתחיל פרויקט חדש";
@@ -160,22 +160,31 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Call to Action - Removed blinking */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold mb-6 text-foreground">
-            מוכנים להתחיל?
-          </h3>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            אל תיתנו ללחץ והזמנים לקבוע את הציונים שלכם. בואו נעזור לכם להצליח!
-          </p>
-          <HeroButton 
-            variant="glow" 
-            size="xl"
-            onClick={() => window.open(whatsappUrl, '_blank')}
-            className="shadow-lg hover:shadow-primary/20 transition-shadow duration-300"
-          >
-            התחילו את הפרויקט שלכם עכשיו
-          </HeroButton>
+        {/* Call to Action - Luxury Design */}
+        <div className="text-center relative">
+          <div className="bg-gradient-to-br from-card/80 via-card to-card/60 backdrop-blur-xl border border-primary/20 rounded-3xl p-12 relative overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5"></div>
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground bg-gradient-to-r from-primary via-primary to-purple-600 bg-clip-text text-transparent">
+                מוכנים להתחיל?
+              </h3>
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
+                אל תיתנו ללחץ והזמנים לקבוע את הציונים שלכם. בואו נעזור לכם להצליח!
+              </p>
+              <HeroButton 
+                variant="glow" 
+                size="xl"
+                onClick={() => window.open(whatsappUrl, '_blank')}
+                className="shadow-2xl hover:shadow-primary/30 transition-all duration-500"
+              >
+                <span className="flex items-center gap-3">
+                  דברו איתנו עכשיו
+                  <ArrowLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform duration-300" />
+                </span>
+              </HeroButton>
+            </div>
+          </div>
         </div>
       </div>
     </section>
