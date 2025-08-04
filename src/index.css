@@ -155,57 +155,76 @@ All colors MUST be HSL.
     transition: var(--transition-smooth);
   }
   
-  .transition-bounce {
-    transition: var(--transition-bounce);
-  }
+    .transition-bounce {
+      transition: var(--transition-bounce);
+    }
+
+    /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
   
-  /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
-  
-  /* Deep Purple & Midnight Blue Flowing Gradient */
-  .animated-gradient {
-    background: linear-gradient(135deg, 
-      hsl(264 83% 25% / 0.12), 
-      hsl(230 100% 8% / 0.08), 
-      hsl(264 83% 35% / 0.06), 
-      hsl(230 100% 12% / 0.04));
-    background-size: 400% 400%;
-    animation: elegantGradientFlow 25s ease-in-out infinite;
-  }
-  
-  /* Fluid Particle Movement */
-  .apple-fluid-bg {
-    background: 
-      radial-gradient(ellipse at 15% 25%, hsl(264 83% 25% / 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 85% 45%, hsl(230 100% 8% / 0.06) 0%, transparent 70%),
-      radial-gradient(ellipse at 35% 85%, hsl(264 83% 35% / 0.04) 0%, transparent 80%),
-      radial-gradient(ellipse at 75% 15%, hsl(230 100% 12% / 0.03) 0%, transparent 65%),
-      radial-gradient(ellipse at 95% 75%, hsl(264 83% 30% / 0.02) 0%, transparent 55%);
-    animation: flowingParticles 30s ease-in-out infinite;
-  }
-  
-  /* Subtle Wave Overlay */
-  .apple-overlay {
-    background: linear-gradient(60deg, 
-      hsl(264 83% 25% / 0.03), 
-      transparent 25%, 
-      hsl(230 100% 8% / 0.02) 50%, 
-      transparent 75%,
-      hsl(264 83% 35% / 0.01));
-    background-size: 300% 300%;
-    animation: waveOverlay 18s linear infinite;
-  }
-  
-  /* Interactive Gradient (responds to scroll/mouse) */
-  .interactive-gradient {
-    background: 
-      radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-        hsl(259 100% 65% / 0.06) 0%, 
-        transparent 60%),
-      linear-gradient(135deg, 
-        hsl(220 100% 60% / 0.02), 
-        hsl(280 100% 70% / 0.01));
-    transition: all 0.3s var(--ios-ease);
-  }
+    /* Deep Purple & Midnight Blue Flowing Gradient */
+    .animated-gradient {
+      background: linear-gradient(135deg,
+        hsl(264 83% 45% / 0.45),
+        hsl(230 100% 20% / 0.4),
+        hsl(264 83% 55% / 0.35),
+        hsl(230 100% 30% / 0.3));
+      background-size: 400% 400%;
+      animation: elegantGradientFlow 25s ease-in-out infinite;
+      filter: blur(100px);
+      mix-blend-mode: screen;
+    }
+
+    /* Fluid Particle Movement */
+    .apple-fluid-bg {
+      background:
+        radial-gradient(ellipse at 15% 25%, hsl(264 83% 45% / 0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 45%, hsl(230 100% 20% / 0.25) 0%, transparent 70%),
+        radial-gradient(ellipse at 35% 85%, hsl(264 83% 55% / 0.2) 0%, transparent 80%),
+        radial-gradient(ellipse at 75% 15%, hsl(230 100% 30% / 0.15) 0%, transparent 65%),
+        radial-gradient(ellipse at 95% 75%, hsl(264 83% 50% / 0.12) 0%, transparent 55%);
+      animation: flowingParticles 30s ease-in-out infinite;
+      filter: blur(80px);
+      mix-blend-mode: screen;
+    }
+
+    /* Subtle Wave Overlay */
+    .apple-overlay {
+      background: linear-gradient(60deg,
+        hsl(264 83% 45% / 0.15),
+        transparent 25%,
+        hsl(230 100% 20% / 0.1) 50%,
+        transparent 75%,
+        hsl(264 83% 55% / 0.06));
+      background-size: 300% 300%;
+      animation: waveOverlay 18s linear infinite;
+      filter: blur(60px);
+      mix-blend-mode: screen;
+    }
+
+    /* Interactive Gradient (responds to scroll/mouse) */
+    .interactive-gradient {
+      background:
+        radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+          hsl(259 100% 65% / 0.4) 0%,
+          transparent 60%),
+        linear-gradient(135deg,
+          hsl(220 100% 70% / 0.15),
+          hsl(280 100% 80% / 0.12));
+      transition: all 0.2s var(--ios-ease);
+      filter: blur(90px);
+      mix-blend-mode: screen;
+    }
+
+    /* Futuristic radial glow */
+    .neon-radial {
+      background:
+        radial-gradient(circle at 20% 30%, hsl(259 94% 60% / 0.35) 0%, transparent 60%),
+        radial-gradient(circle at 80% 70%, hsl(239 84% 65% / 0.3) 0%, transparent 65%),
+        radial-gradient(circle at 50% 50%, hsl(280 100% 70% / 0.25) 0%, transparent 70%);
+      animation: neonPulse 12s ease-in-out infinite alternate;
+      mix-blend-mode: screen;
+      filter: blur(120px);
+    }
   
   /* Animated wave background */
   .wave-bg {
@@ -335,15 +354,26 @@ All colors MUST be HSL.
   
   /* Text shimmer effect */
   .text-shimmer {
-    background: linear-gradient(90deg, 
-      hsl(259 100% 65%) 0%, 
-      hsl(0 0% 100%) 50%, 
+    background: linear-gradient(90deg,
+      hsl(259 100% 65%) 0%,
+      hsl(0 0% 100%) 50%,
       hsl(259 100% 65%) 100%);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Elements tagged for scroll animation start hidden */
+  [data-animate] {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  [data-stagger] > * {
+    opacity: 0;
+    will-change: transform, opacity;
   }
 }
 
@@ -438,6 +468,11 @@ All colors MUST be HSL.
   @keyframes pulseGlow {
     from { box-shadow: 0 0 20px hsl(259 100% 65% / 0.3); }
     to { box-shadow: 0 0 40px hsl(259 100% 65% / 0.7); }
+  }
+
+  @keyframes neonPulse {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(1.1); opacity: 1; }
   }
   
   @keyframes shimmer {
@@ -552,23 +587,7 @@ All colors MUST be HSL.
     animation: slideInFromRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
-  .ios-text-reveal {
-    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-
-  .ios-text-reveal-delay {
-    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
-  }
-
-  /* Staggered entrance animations */
-  .ios-stagger-enter .ios-stagger-1 { animation-delay: 0.1s; }
-  .ios-stagger-enter .ios-stagger-2 { animation-delay: 0.2s; }
-  .ios-stagger-enter .ios-stagger-3 { animation-delay: 0.3s; }
-  .ios-stagger-enter .ios-stagger-4 { animation-delay: 0.4s; }
-  .ios-stagger-enter .ios-stagger-5 { animation-delay: 0.5s; }
-  .ios-stagger-enter .ios-stagger-6 { animation-delay: 0.6s; }
-
-  /* Premium card effects */
+    /* Premium card effects */
   .ios-card {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
@@ -673,15 +692,15 @@ All colors MUST be HSL.
     }
   }
 
-  @keyframes ios-text-reveal {
+@keyframes ios-text-reveal {
     0% {
       opacity: 0;
-      transform: translateY(30px);
-      filter: blur(1px);
+      transform: translateY(50px) scale(0.98);
+      filter: blur(4px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
       filter: blur(0);
     }
   }
@@ -689,7 +708,7 @@ All colors MUST be HSL.
   @keyframes ios-scale-enter {
     0% {
       opacity: 0;
-      transform: scale(0.95) translateY(20px);
+      transform: scale(0.9) translateY(30px);
     }
     100% {
       opacity: 1;
@@ -700,11 +719,11 @@ All colors MUST be HSL.
   @keyframes ios-stagger-up {
     0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(50px) scale(0.98);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
   }
 
@@ -797,31 +816,23 @@ All colors MUST be HSL.
 
   .ios-text-reveal {
     opacity: 0;
-    animation: ios-text-reveal 0.8s var(--ios-ease) forwards;
+    animation: ios-text-reveal 1s var(--ios-ease) forwards;
   }
 
   .ios-text-reveal-delay {
     opacity: 0;
-    animation: ios-text-reveal 0.8s var(--ios-ease) 0.2s forwards;
+    animation: ios-text-reveal 1s var(--ios-ease) 0.2s forwards;
   }
 
   .ios-scale-enter {
     opacity: 0;
-    animation: ios-scale-enter 0.6s var(--ios-ease) forwards;
+    animation: ios-scale-enter 0.8s var(--ios-ease) forwards;
   }
 
   .ios-stagger-enter {
     opacity: 0;
-    animation: ios-stagger-up 0.6s var(--ios-ease) forwards;
+    animation: ios-stagger-up 0.8s var(--ios-ease) forwards;
   }
-
-  /* Stagger delays for service cards */
-  .ios-stagger-1 { animation-delay: 0.1s; }
-  .ios-stagger-2 { animation-delay: 0.2s; }
-  .ios-stagger-3 { animation-delay: 0.3s; }
-  .ios-stagger-4 { animation-delay: 0.4s; }
-  .ios-stagger-5 { animation-delay: 0.5s; }
-  .ios-stagger-6 { animation-delay: 0.6s; }
 
   /* Interactive Elements */
   .ios-button {
