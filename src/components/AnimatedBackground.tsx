@@ -13,35 +13,43 @@ const AnimatedBackground = () => {
     const el = ref.current;
     if (!el) return;
 
+    let mouseFrame: number | null = null;
+    let scrollFrame: number | null = null;
+
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      el.style.setProperty("--mouse-x", `${x}%`);
-      el.style.setProperty("--mouse-y", `${y}%`);
+      if (mouseFrame !== null) return;
+      mouseFrame = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        el.style.setProperty("--mouse-x", `${x}%`);
+        el.style.setProperty("--mouse-y", `${y}%`);
+        mouseFrame = null;
+      });
     };
 
     const handleScroll = () => {
-      const offset = window.scrollY * -0.1;
-      el.style.transform = `translateY(${offset}px)`;
+      if (scrollFrame !== null) return;
+      scrollFrame = requestAnimationFrame(() => {
+        const offset = window.scrollY * -0.1;
+        el.style.transform = `translateY(${offset}px)`;
+        scrollFrame = null;
+      });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("scroll", handleScroll);
+      if (mouseFrame !== null) cancelAnimationFrame(mouseFrame);
+      if (scrollFrame !== null) cancelAnimationFrame(scrollFrame);
     };
   }, []);
 
   return (
-    <div ref={ref} className="absolute inset-0">
-      {/* iPhone X style geometric background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: `url(${geometricBg})` }}
-      />
+
       <div className="absolute inset-0 animated-gradient" />
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />
