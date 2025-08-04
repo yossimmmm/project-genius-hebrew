@@ -171,6 +171,13 @@ All colors MUST be HSL.
       background-size: 400% 400%;
       animation: elegantGradientFlow 25s ease-in-out infinite;
       filter: blur(100px);
+        hsl(264 83% 25% / 0.25),
+        hsl(230 100% 8% / 0.2),
+        hsl(264 83% 35% / 0.15),
+        hsl(230 100% 12% / 0.1));
+      background-size: 400% 400%;
+      animation: elegantGradientFlow 25s ease-in-out infinite;
+      filter: blur(80px);
       mix-blend-mode: screen;
     }
 
@@ -185,6 +192,14 @@ All colors MUST be HSL.
       animation: flowingParticles 30s ease-in-out infinite;
       filter: blur(80px);
       mix-blend-mode: screen;
+        radial-gradient(ellipse at 15% 25%, hsl(264 83% 25% / 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 45%, hsl(230 100% 8% / 0.14) 0%, transparent 70%),
+        radial-gradient(ellipse at 35% 85%, hsl(264 83% 35% / 0.1) 0%, transparent 80%),
+        radial-gradient(ellipse at 75% 15%, hsl(230 100% 12% / 0.08) 0%, transparent 65%),
+        radial-gradient(ellipse at 95% 75%, hsl(264 83% 30% / 0.06) 0%, transparent 55%);
+      animation: flowingParticles 30s ease-in-out infinite;
+      filter: blur(60px);
+      mix-blend-mode: overlay;
     }
 
     /* Subtle Wave Overlay */
@@ -199,6 +214,15 @@ All colors MUST be HSL.
       animation: waveOverlay 18s linear infinite;
       filter: blur(60px);
       mix-blend-mode: screen;
+        hsl(264 83% 25% / 0.08),
+        transparent 25%,
+        hsl(230 100% 8% / 0.05) 50%,
+        transparent 75%,
+        hsl(264 83% 35% / 0.03));
+      background-size: 300% 300%;
+      animation: waveOverlay 18s linear infinite;
+      filter: blur(40px);
+      mix-blend-mode: overlay;
     }
 
     /* Interactive Gradient (responds to scroll/mouse) */
@@ -224,6 +248,14 @@ All colors MUST be HSL.
       animation: neonPulse 12s ease-in-out infinite alternate;
       mix-blend-mode: screen;
       filter: blur(120px);
+          hsl(259 100% 65% / 0.2) 0%,
+          transparent 60%),
+        linear-gradient(135deg,
+          hsl(220 100% 60% / 0.1),
+          hsl(280 100% 70% / 0.08));
+      transition: all 0.2s var(--ios-ease);
+      filter: blur(80px);
+      mix-blend-mode: soft-light;
     }
   
   /* Animated wave background */
@@ -368,8 +400,6 @@ All colors MUST be HSL.
   /* Elements tagged for scroll animation start hidden */
   [data-animate] {
     opacity: 0;
-    will-change: transform, opacity;
-  }
 
   [data-stagger] > * {
     opacity: 0;
@@ -585,6 +615,14 @@ All colors MUST be HSL.
 
   .ios-slide-right {
     animation: slideInFromRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .ios-text-reveal {
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .ios-text-reveal-delay {
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
   }
 
     /* Premium card effects */

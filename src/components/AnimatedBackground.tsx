@@ -12,11 +12,6 @@ const AnimatedBackground = () => {
     const el = ref.current;
     if (!el) return;
 
-    // Respect users that prefer reduced motion by skipping interactive effects
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return;
-    }
-
     const handleMouseMove = (e: MouseEvent) => {
       const rect = el.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -49,6 +44,10 @@ const AnimatedBackground = () => {
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />
       <div className="absolute inset-0 neon-radial" />
+
+      <div className="absolute inset-0 animated-gradient" />
+      <div className="absolute inset-0 apple-fluid-bg" />
+      <div className="absolute inset-0 apple-overlay" />
       <div className="absolute inset-0 interactive-gradient" />
     </div>
   );
