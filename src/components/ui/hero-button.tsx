@@ -12,7 +12,7 @@ const heroButtonVariants = cva(
         hero: "gradient-bg text-white hover:scale-105 hover:glow-primary font-bold shadow-lg transform transition-all duration-300 ease-out",
         whatsapp: "bg-green-500 text-white hover:bg-green-600 hover:scale-105 transition-all duration-300 shadow-lg",
         outline: "border border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300",
-        glow: "gradient-bg text-white hover:scale-105 font-bold shadow-lg hover:shadow-primary/30 transition-all duration-300"
+        glow: "bg-gradient-to-r from-primary via-primary to-primary/90 text-white hover:scale-[1.02] font-semibold shadow-2xl hover:shadow-primary/40 transition-all duration-500 ease-out border border-primary/20 backdrop-blur-sm relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/10 before:to-white/0 before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
       },
       size: {
         default: "h-10 px-4 py-2",

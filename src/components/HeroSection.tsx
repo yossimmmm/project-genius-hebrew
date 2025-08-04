@@ -33,7 +33,7 @@ const HeroSection = () => {
           <div className="space-y-4 ios-text-reveal">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-heebo">
               <span className="text-foreground font-bold block">
-                אין לך זמן או חשק לפרויקט? לנו יש.
+                תשאירו את הכאב ראש והעבודה השחורה לנו.
               </span>
             </h1>
             
@@ -42,16 +42,13 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Service Tags - Better Mobile Layout */}
+          {/* Service Tags - Premium iOS Style */}
           <div className="space-y-6 ios-fade-up">
-            <p className="text-base md:text-lg text-muted-foreground font-light">
-              תשאירו את הכאב ראש והעבודה השחורה לנו.
-            </p>
-            <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 max-w-2xl mx-auto ios-stagger-enter">
-              <span className="bg-primary/10 text-primary px-3 py-2 rounded-xl border border-primary/20 ios-stagger-3 text-center text-sm md:text-base">עבודות גמר</span>
-              <span className="bg-primary/10 text-primary px-3 py-2 rounded-xl border border-primary/20 ios-stagger-4 text-center text-sm md:text-base">תרגילים</span>
-              <span className="bg-primary/10 text-primary px-3 py-2 rounded-xl border border-primary/20 ios-stagger-5 text-center text-sm md:text-base">קורסים</span>
-              <span className="bg-primary/10 text-primary px-3 py-2 rounded-xl border border-primary/20 ios-stagger-6 text-center text-sm md:text-base">ליווי אישי</span>
+            <div className="flex flex-wrap justify-center gap-2 max-w-lg mx-auto ios-stagger-enter">
+              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-3 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">עבודות גמר</span>
+              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-4 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">תרגילים</span>
+              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-5 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">קורסים</span>
+              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-6 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">ליווי אישי</span>
             </div>
           </div>
 
