@@ -57,7 +57,7 @@ const ServicesSection = () => {
   const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden">
+    <section id="services" className="py-20 relative overflow-hidden" data-animate="ios-page-enter">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/95 to-background"></div>
       <div className="absolute inset-0 animated-gradient opacity-10"></div>

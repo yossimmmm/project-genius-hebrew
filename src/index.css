@@ -335,15 +335,20 @@ All colors MUST be HSL.
   
   /* Text shimmer effect */
   .text-shimmer {
-    background: linear-gradient(90deg, 
-      hsl(259 100% 65%) 0%, 
-      hsl(0 0% 100%) 50%, 
+    background: linear-gradient(90deg,
+      hsl(259 100% 65%) 0%,
+      hsl(0 0% 100%) 50%,
       hsl(259 100% 65%) 100%);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Elements tagged for scroll animation start hidden */
+  [data-animate] {
+    opacity: 0;
   }
 }
 
