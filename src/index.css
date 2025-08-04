@@ -162,6 +162,62 @@ All colors MUST be HSL.
   /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
 
   /* Deep Purple & Midnight Blue Flowing Gradient */
+  .animated-gradient {
+    background: linear-gradient(135deg,
+      hsl(264 83% 25% / 0.25),
+      hsl(230 100% 8% / 0.2),
+      hsl(264 83% 35% / 0.15),
+      hsl(230 100% 12% / 0.1));
+    background-size: 400% 400%;
+    animation: elegantGradientFlow 25s ease-in-out infinite;
+    filter: blur(6px);
+    mix-blend-mode: screen;
+  }
+
+  /* Fluid Particle Movement */
+  .apple-fluid-bg {
+    background:
+      radial-gradient(ellipse at 15% 25%, hsl(264 83% 25% / 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 85% 45%, hsl(230 100% 8% / 0.14) 0%, transparent 70%),
+      radial-gradient(ellipse at 35% 85%, hsl(264 83% 35% / 0.1) 0%, transparent 80%),
+      radial-gradient(ellipse at 75% 15%, hsl(230 100% 12% / 0.08) 0%, transparent 65%),
+      radial-gradient(ellipse at 95% 75%, hsl(264 83% 30% / 0.06) 0%, transparent 55%);
+    animation: flowingParticles 30s ease-in-out infinite;
+    filter: blur(4px);
+    mix-blend-mode: overlay;
+  }
+
+  /* Subtle Wave Overlay */
+  .apple-overlay {
+    background: linear-gradient(60deg,
+      hsl(264 83% 25% / 0.08),
+      transparent 25%,
+      hsl(230 100% 8% / 0.05) 50%,
+      transparent 75%,
+      hsl(264 83% 35% / 0.03));
+    background-size: 300% 300%;
+    animation: waveOverlay 18s linear infinite;
+    filter: blur(3px);
+    mix-blend-mode: overlay;
+  }
+
+  /* Interactive Gradient (responds to scroll/mouse) */
+  .interactive-gradient {
+    background:
+      radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        hsl(259 100% 65% / 0.2) 0%,
+        transparent 60%),
+      linear-gradient(135deg,
+        hsl(220 100% 60% / 0.1),
+        hsl(280 100% 70% / 0.08));
+    transition: all 0.2s var(--ios-ease);
+    filter: blur(6px);
+    mix-blend-mode: soft-light;
+  }
+
+  .animated-background {
+    will-change: transform;
+  }
     .animated-gradient {
       background: linear-gradient(135deg,
         hsl(264 83% 25% / 0.25),
@@ -652,22 +708,10 @@ All colors MUST be HSL.
     transform: translateY(0);
   }
 
-  /* Breathing effect */
-  @keyframes breathe {
-    0%, 100% { 
-      transform: scale(1); 
-      opacity: 0.9; 
-    }
-    50% { 
-      transform: scale(1.01); 
-      opacity: 1; 
-    }
-  }
-
   .breathe {
     animation: breathe 4s ease-in-out infinite;
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
