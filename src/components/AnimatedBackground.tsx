@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import geometricBg from "@/assets/geometric-bg.jpg";
 
 /**
  * AnimatedBackground renders the luxurious animated gradient backdrop.
@@ -28,6 +29,13 @@ const AnimatedBackground = () => {
     const handleMouseMove = (e: PointerEvent) => {
       if (mouseFrame !== null) return;
       mouseFrame = requestAnimationFrame(() => {
+    let mouseFrame: number | null = null;
+    let scrollFrame: number | null = null;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (mouseFrame !== null) return;
+      mouseFrame = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * 100;
         const y = ((e.clientY - rect.top) / rect.height) * 100;
         el.style.setProperty("--mouse-x", `${x}%`);
@@ -58,6 +66,12 @@ const AnimatedBackground = () => {
         window.removeEventListener("scroll", handleScroll);
         window.removeEventListener("resize", updateRect);
       }
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
       if (mouseFrame !== null) cancelAnimationFrame(mouseFrame);
       if (scrollFrame !== null) cancelAnimationFrame(scrollFrame);
     };
