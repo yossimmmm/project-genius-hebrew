@@ -154,15 +154,15 @@ All colors MUST be HSL.
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
-    .transition-bounce {
-      transition: var(--transition-bounce);
-    }
 
-    /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
-  
-    /* Deep Purple & Midnight Blue Flowing Gradient */
-    .animated-gradient {
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
+
+  /* Deep Purple & Midnight Blue Flowing Gradient */
+  .animated-gradient {
       background: linear-gradient(135deg,
         hsl(264 83% 25% / 0.25),
         hsl(230 100% 8% / 0.2),

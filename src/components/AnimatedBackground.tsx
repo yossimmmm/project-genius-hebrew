@@ -35,7 +35,7 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-
+    <div ref={ref} className="absolute inset-0">
       <div className="absolute inset-0 animated-gradient" />
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />
