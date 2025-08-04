@@ -18,12 +18,15 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8 ios-scale-enter">
-            <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card ios-stagger-1">
+          <div
+            className="flex flex-wrap justify-center gap-4 mb-8 ios-scale-enter"
+            data-stagger="ios-stagger-enter"
+          >
+            <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card">
               <Users className="w-4 h-4 text-primary" />
               <span className="text-foreground font-medium text-sm">מעל 250 לקוחות מרוצים</span>
             </div>
-            <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card ios-stagger-2">
+            <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card">
               <GraduationCap className="w-4 h-4 text-primary" />
               <span className="text-foreground font-medium text-sm">ציון ממוצע 90+</span>
             </div>
@@ -44,11 +47,22 @@ const HeroSection = () => {
 
           {/* Service Tags - Premium Purple Style */}
           <div className="space-y-6 ios-fade-up">
-            <div className="flex flex-wrap justify-center gap-3 max-w-lg mx-auto ios-stagger-enter">
-              <HeroButton variant="xy" size="sm" className="ios-stagger-3">עבודות גמר</HeroButton>
-              <HeroButton variant="xy" size="sm" className="ios-stagger-4">תרגילים</HeroButton>
-              <HeroButton variant="xy" size="sm" className="ios-stagger-5">קורסים</HeroButton>
-              <HeroButton variant="xy" size="sm" className="ios-stagger-6">ליווי אישי</HeroButton>
+            <div
+              className="flex flex-wrap justify-center gap-3 max-w-lg mx-auto"
+              data-stagger="ios-stagger-enter"
+            >
+              <HeroButton variant="xy" size="sm">
+                עבודות גמר
+              </HeroButton>
+              <HeroButton variant="xy" size="sm">
+                תרגילים
+              </HeroButton>
+              <HeroButton variant="xy" size="sm">
+                קורסים
+              </HeroButton>
+              <HeroButton variant="xy" size="sm">
+                ליווי אישי
+              </HeroButton>
             </div>
           </div>
 

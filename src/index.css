@@ -43,18 +43,39 @@ All colors MUST be HSL.
     --radius: 1rem;
 
     /* Premium gradients with depth */
-    --gradient-primary: linear-gradient(135deg, hsl(259 94% 67%), hsl(239 84% 67%));
-    --gradient-secondary: linear-gradient(135deg, hsl(239 84% 67%), hsl(270 81% 75%));
-    --gradient-hero: linear-gradient(135deg, hsl(259 94% 67%) 0%, hsl(239 84% 67%) 40%, hsl(270 81% 75%) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(259 94% 67% / 0.1), hsl(239 84% 67% / 0.05));
-    --gradient-footer: linear-gradient(180deg, hsl(220 13% 9%) 0%, hsl(220 13% 6%) 100%);
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(259 94% 67%),
+      hsl(239 84% 67%)
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(239 84% 67%),
+      hsl(270 81% 75%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(259 94% 67%) 0%,
+      hsl(239 84% 67%) 40%,
+      hsl(270 81% 75%) 100%
+    );
+    --gradient-glass: linear-gradient(
+      135deg,
+      hsl(259 94% 67% / 0.1),
+      hsl(239 84% 67% / 0.05)
+    );
+    --gradient-footer: linear-gradient(
+      180deg,
+      hsl(220 13% 9%) 0%,
+      hsl(220 13% 6%) 100%
+    );
+
     /* Premium shadows and effects */
     --glow-primary: 0 0 50px hsl(259 94% 67% / 0.4);
     --glow-secondary: 0 0 50px hsl(239 84% 67% / 0.3);
     --shadow-elegant: 0 25px 50px -12px hsl(220 13% 0% / 0.25);
     --shadow-glass: 0 8px 32px hsl(220 13% 0% / 0.3);
-    
+
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -123,7 +144,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Heebo', sans-serif;
+    font-family: "Heebo", sans-serif;
     direction: rtl;
   }
 }
@@ -134,95 +155,156 @@ All colors MUST be HSL.
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-primary);
   }
-  
+
   .gradient-bg {
     background-image: var(--gradient-primary);
   }
-  
+
   .hero-gradient {
     background-image: var(--gradient-hero);
   }
-  
+
   .glow-primary {
     box-shadow: var(--glow-primary);
   }
-  
+
   .glow-secondary {
     box-shadow: var(--glow-secondary);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
+
   .transition-bounce {
     transition: var(--transition-bounce);
   }
-  
+
   /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
-  
+
   /* Deep Purple & Midnight Blue Flowing Gradient */
   .animated-gradient {
-    background: linear-gradient(135deg, 
-      hsl(264 83% 25% / 0.12), 
-      hsl(230 100% 8% / 0.08), 
-      hsl(264 83% 35% / 0.06), 
-      hsl(230 100% 12% / 0.04));
+    background: linear-gradient(
+      135deg,
+      hsl(264 83% 45% / 0.45),
+      hsl(230 100% 20% / 0.4),
+      hsl(264 83% 55% / 0.35),
+      hsl(230 100% 30% / 0.3)
+    );
     background-size: 400% 400%;
     animation: elegantGradientFlow 25s ease-in-out infinite;
+    filter: blur(100px);
+    mix-blend-mode: screen;
   }
-  
+
   /* Fluid Particle Movement */
   .apple-fluid-bg {
-    background: 
-      radial-gradient(ellipse at 15% 25%, hsl(264 83% 25% / 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 85% 45%, hsl(230 100% 8% / 0.06) 0%, transparent 70%),
-      radial-gradient(ellipse at 35% 85%, hsl(264 83% 35% / 0.04) 0%, transparent 80%),
-      radial-gradient(ellipse at 75% 15%, hsl(230 100% 12% / 0.03) 0%, transparent 65%),
-      radial-gradient(ellipse at 95% 75%, hsl(264 83% 30% / 0.02) 0%, transparent 55%);
+    background:
+      radial-gradient(
+        ellipse at 15% 25%,
+        hsl(264 83% 45% / 0.3) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at 85% 45%,
+        hsl(230 100% 20% / 0.25) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse at 35% 85%,
+        hsl(264 83% 55% / 0.2) 0%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse at 75% 15%,
+        hsl(230 100% 30% / 0.15) 0%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse at 95% 75%,
+        hsl(264 83% 50% / 0.12) 0%,
+        transparent 55%
+      );
     animation: flowingParticles 30s ease-in-out infinite;
+    filter: blur(80px);
+    mix-blend-mode: screen;
   }
-  
+
   /* Subtle Wave Overlay */
   .apple-overlay {
-    background: linear-gradient(60deg, 
-      hsl(264 83% 25% / 0.03), 
-      transparent 25%, 
-      hsl(230 100% 8% / 0.02) 50%, 
+    background: linear-gradient(
+      60deg,
+      hsl(264 83% 45% / 0.15),
+      transparent 25%,
+      hsl(230 100% 20% / 0.1) 50%,
       transparent 75%,
-      hsl(264 83% 35% / 0.01));
+      hsl(264 83% 55% / 0.06)
+    );
     background-size: 300% 300%;
     animation: waveOverlay 18s linear infinite;
+    filter: blur(60px);
+    mix-blend-mode: screen;
   }
-  
+
   /* Interactive Gradient (responds to scroll/mouse) */
   .interactive-gradient {
-    background: 
-      radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-        hsl(259 100% 65% / 0.06) 0%, 
-        transparent 60%),
-      linear-gradient(135deg, 
-        hsl(220 100% 60% / 0.02), 
-        hsl(280 100% 70% / 0.01));
-    transition: all 0.3s var(--ios-ease);
+    background:
+      radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        hsl(259 100% 65% / 0.4) 0%,
+        transparent 60%
+      ),
+      linear-gradient(
+        135deg,
+        hsl(220 100% 70% / 0.15),
+        hsl(280 100% 80% / 0.12)
+      );
+    transition: all 0.2s var(--ios-ease);
+    filter: blur(90px);
+    mix-blend-mode: screen;
   }
-  
+
+  /* Futuristic radial glow */
+  .neon-radial {
+    background:
+      radial-gradient(
+        circle at 20% 30%,
+        hsl(259 94% 60% / 0.35) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 80% 70%,
+        hsl(239 84% 65% / 0.3) 0%,
+        transparent 65%
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        hsl(280 100% 70% / 0.25) 0%,
+        transparent 70%
+      );
+    animation: neonPulse 12s ease-in-out infinite alternate;
+    mix-blend-mode: screen;
+    filter: blur(120px);
+  }
+
   /* Animated wave background */
   .wave-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, 
-      hsl(259 100% 65% / 0.1), 
-      hsl(220 100% 60% / 0.1), 
+    background: linear-gradient(
+      45deg,
+      hsl(259 100% 65% / 0.1),
+      hsl(220 100% 60% / 0.1),
       hsl(280 100% 70% / 0.1),
-      hsl(300 80% 65% / 0.1));
+      hsl(300 80% 65% / 0.1)
+    );
     background-size: 400% 400%;
     animation: waveMove 15s ease infinite;
   }
-  
+
   .wave-bg::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -237,9 +319,9 @@ All colors MUST be HSL.
     );
     animation: slideLines 20s linear infinite;
   }
-  
+
   .wave-bg::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -254,19 +336,19 @@ All colors MUST be HSL.
     );
     animation: slideDiagonal 25s linear infinite reverse;
   }
-  
+
   /* Animated grid pattern */
   .grid-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
       linear-gradient(hsl(259 100% 65% / 0.1) 1px, transparent 1px),
       linear-gradient(90deg, hsl(259 100% 65% / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 30s linear infinite;
   }
-  
+
   /* Morphing blob background */
   .blob-bg {
     position: absolute;
@@ -274,7 +356,7 @@ All colors MUST be HSL.
     height: 100%;
     overflow: hidden;
   }
-  
+
   .blob {
     position: absolute;
     border-radius: 50%;
@@ -282,7 +364,7 @@ All colors MUST be HSL.
     mix-blend-mode: multiply;
     animation: morphBlob 20s ease-in-out infinite;
   }
-  
+
   .blob-1 {
     width: 300px;
     height: 300px;
@@ -291,7 +373,7 @@ All colors MUST be HSL.
     left: 20%;
     animation-delay: 0s;
   }
-  
+
   .blob-2 {
     width: 400px;
     height: 400px;
@@ -300,7 +382,7 @@ All colors MUST be HSL.
     right: 20%;
     animation-delay: 7s;
   }
-  
+
   .blob-3 {
     width: 250px;
     height: 250px;
@@ -309,22 +391,22 @@ All colors MUST be HSL.
     left: 10%;
     animation-delay: 14s;
   }
-  
+
   /* Breathing animation for background */
   .breathing-bg {
     animation: breathe 8s ease-in-out infinite;
   }
-  
+
   /* Floating animation */
   .float {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   /* Pulse glow animation */
   .pulse-glow {
     animation: pulseGlow 2s ease-in-out infinite alternate;
   }
-  
+
   /* Scale on hover */
   .hover-scale {
     @apply transition-transform duration-300 ease-out;
@@ -332,80 +414,113 @@ All colors MUST be HSL.
   .hover-scale:hover {
     transform: scale(1.05);
   }
-  
+
   /* Text shimmer effect */
   .text-shimmer {
-    background: linear-gradient(90deg, 
-      hsl(259 100% 65%) 0%, 
-      hsl(0 0% 100%) 50%, 
-      hsl(259 100% 65%) 100%);
+    background: linear-gradient(
+      90deg,
+      hsl(259 100% 65%) 0%,
+      hsl(0 0% 100%) 50%,
+      hsl(259 100% 65%) 100%
+    );
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s ease-in-out infinite;
   }
+
+  /* Elements tagged for scroll animation start hidden */
+  [data-animate] {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  [data-stagger] > * {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
 }
 
 @layer utilities {
   /* ====== APPLE-INSPIRED BACKGROUND KEYFRAMES ====== */
-  
+
   /* Elegant Deep Purple & Midnight Blue Flow */
   @keyframes elegantGradientFlow {
-    0%, 100% { 
-      background-position: 0% 30%; 
+    0%,
+    100% {
+      background-position: 0% 30%;
       opacity: 0.95;
     }
-    25% { 
-      background-position: 100% 70%; 
+    25% {
+      background-position: 100% 70%;
       opacity: 1;
     }
-    50% { 
-      background-position: 30% 100%; 
+    50% {
+      background-position: 30% 100%;
       opacity: 0.9;
     }
-    75% { 
-      background-position: 70% 0%; 
+    75% {
+      background-position: 70% 0%;
       opacity: 1;
     }
   }
 
   /* Flowing Particles Animation */
   @keyframes flowingParticles {
-    0%, 100% { 
-      transform: translateX(0) translateY(0) rotate(0deg); 
+    0%,
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
     }
-    20% { 
-      transform: translateX(15px) translateY(-10px) rotate(0.5deg); 
+    20% {
+      transform: translateX(15px) translateY(-10px) rotate(0.5deg);
     }
-    40% { 
-      transform: translateX(-8px) translateY(12px) rotate(-0.3deg); 
+    40% {
+      transform: translateX(-8px) translateY(12px) rotate(-0.3deg);
     }
-    60% { 
-      transform: translateX(12px) translateY(-6px) rotate(0.2deg); 
+    60% {
+      transform: translateX(12px) translateY(-6px) rotate(0.2deg);
     }
-    80% { 
-      transform: translateX(-5px) translateY(8px) rotate(-0.1deg); 
+    80% {
+      transform: translateX(-5px) translateY(8px) rotate(-0.1deg);
     }
   }
 
   /* Gentle Wave Overlay */
   @keyframes waveOverlay {
-    0% { background-position: 0% 0%; }
-    30% { background-position: 100% 40%; }
-    60% { background-position: 40% 100%; }
-    100% { background-position: 0% 0%; }
+    0% {
+      background-position: 0% 0%;
+    }
+    30% {
+      background-position: 100% 40%;
+    }
+    60% {
+      background-position: 40% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
   }
 
   /* Legacy gradient shift */
   @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 100% 50%; }
-    50% { background-position: 0% 100%; }
-    75% { background-position: 100% 0%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    75% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-  
+
   @keyframes floatParticle {
     0% {
       transform: translateY(100vh) translateX(0px) scale(0);
@@ -424,83 +539,155 @@ All colors MUST be HSL.
       opacity: 0;
     }
   }
-  
+
   @keyframes breathe {
-    0%, 100% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.02); opacity: 1; }
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 1;
+    }
   }
-  
+
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
-  
+
   @keyframes pulseGlow {
-    from { box-shadow: 0 0 20px hsl(259 100% 65% / 0.3); }
-    to { box-shadow: 0 0 40px hsl(259 100% 65% / 0.7); }
+    from {
+      box-shadow: 0 0 20px hsl(259 100% 65% / 0.3);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(259 100% 65% / 0.7);
+    }
   }
-  
+
+  @keyframes neonPulse {
+    from {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
   @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
-  
+
   @keyframes rotateFloat {
-    0% { transform: rotate(0deg) translateY(0px); }
-    25% { transform: rotate(90deg) translateY(-20px); }
-    50% { transform: rotate(180deg) translateY(-10px); }
-    75% { transform: rotate(270deg) translateY(-30px); }
-    100% { transform: rotate(360deg) translateY(0px); }
+    0% {
+      transform: rotate(0deg) translateY(0px);
+    }
+    25% {
+      transform: rotate(90deg) translateY(-20px);
+    }
+    50% {
+      transform: rotate(180deg) translateY(-10px);
+    }
+    75% {
+      transform: rotate(270deg) translateY(-30px);
+    }
+    100% {
+      transform: rotate(360deg) translateY(0px);
+    }
   }
-  
+
   @keyframes moveBeam {
-    0% { transform: translateX(-100px); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateX(100px); opacity: 0; }
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
   }
-  
+
   @keyframes waveMove {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 100% 50%; }
-    50% { background-position: 0% 100%; }
-    75% { background-position: 100% 0%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    75% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-  
+
   @keyframes slideLines {
-    0% { transform: translateX(-100px); }
-    100% { transform: translateX(100px); }
+    0% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(100px);
+    }
   }
-  
+
   @keyframes slideDiagonal {
-    0% { transform: translateX(-100px) translateY(-100px); }
-    100% { transform: translateX(100px) translateY(100px); }
+    0% {
+      transform: translateX(-100px) translateY(-100px);
+    }
+    100% {
+      transform: translateX(100px) translateY(100px);
+    }
   }
-  
+
   @keyframes gridMove {
-    0% { background-position: 0 0; }
-    100% { background-position: 50px 50px; }
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
   }
-  
+
   @keyframes morphBlob {
-    0%, 100% { 
-      transform: translate(0, 0) scale(1); 
-      border-radius: 50%; 
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+      border-radius: 50%;
     }
-    25% { 
-      transform: translate(20px, -20px) scale(1.1); 
-      border-radius: 40% 60% 50% 50%; 
+    25% {
+      transform: translate(20px, -20px) scale(1.1);
+      border-radius: 40% 60% 50% 50%;
     }
-    50% { 
-      transform: translate(-10px, 10px) scale(0.9); 
-      border-radius: 60% 40% 30% 70%; 
+    50% {
+      transform: translate(-10px, 10px) scale(0.9);
+      border-radius: 60% 40% 30% 70%;
     }
-    75% { 
-      transform: translate(-20px, -10px) scale(1.05); 
-      border-radius: 30% 70% 60% 40%; 
+    75% {
+      transform: translate(-20px, -10px) scale(1.05);
+      border-radius: 30% 70% 60% 40%;
     }
   }
-  
+
   /* Enhanced iOS Animations */
   @keyframes fadeInUp {
     from {
@@ -552,22 +739,6 @@ All colors MUST be HSL.
     animation: slideInFromRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
-  .ios-text-reveal {
-    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-
-  .ios-text-reveal-delay {
-    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
-  }
-
-  /* Staggered entrance animations */
-  .ios-stagger-enter .ios-stagger-1 { animation-delay: 0.1s; }
-  .ios-stagger-enter .ios-stagger-2 { animation-delay: 0.2s; }
-  .ios-stagger-enter .ios-stagger-3 { animation-delay: 0.3s; }
-  .ios-stagger-enter .ios-stagger-4 { animation-delay: 0.4s; }
-  .ios-stagger-enter .ios-stagger-5 { animation-delay: 0.5s; }
-  .ios-stagger-enter .ios-stagger-6 { animation-delay: 0.6s; }
-
   /* Premium card effects */
   .ios-card {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -593,20 +764,21 @@ All colors MUST be HSL.
 
   /* Breathing effect */
   @keyframes breathe {
-    0%, 100% { 
-      transform: scale(1); 
-      opacity: 0.9; 
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.9;
     }
-    50% { 
-      transform: scale(1.01); 
-      opacity: 1; 
+    50% {
+      transform: scale(1.01);
+      opacity: 1;
     }
   }
 
   .breathe {
     animation: breathe 4s ease-in-out infinite;
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -617,7 +789,7 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
-  
+
   @keyframes slideInRight {
     from {
       opacity: 0;
@@ -628,29 +800,29 @@ All colors MUST be HSL.
       transform: translateX(0);
     }
   }
-  
+
   .animate-fadeInUp {
     animation: fadeInUp 0.8s ease-out forwards;
   }
-  
+
   .animate-slideInRight {
     animation: slideInRight 0.8s ease-out forwards;
   }
-  
+
   .animate-delay-200 {
     animation-delay: 0.2s;
   }
-  
+
   .animate-delay-400 {
     animation-delay: 0.4s;
   }
-  
+
   .animate-delay-600 {
     animation-delay: 0.6s;
   }
 
   /* ====== PREMIUM iOS-STYLE ANIMATION SYSTEM ====== */
-  
+
   /* Core iOS Animation Curves */
   :root {
     --ios-ease: cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -660,7 +832,7 @@ All colors MUST be HSL.
   }
 
   /* ====== KEYFRAME ANIMATIONS ====== */
-  
+
   /* Page & Section Entry */
   @keyframes ios-page-enter {
     0% {
@@ -676,12 +848,12 @@ All colors MUST be HSL.
   @keyframes ios-text-reveal {
     0% {
       opacity: 0;
-      transform: translateY(30px);
-      filter: blur(1px);
+      transform: translateY(50px) scale(0.98);
+      filter: blur(4px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
       filter: blur(0);
     }
   }
@@ -689,7 +861,7 @@ All colors MUST be HSL.
   @keyframes ios-scale-enter {
     0% {
       opacity: 0;
-      transform: scale(0.95) translateY(20px);
+      transform: scale(0.9) translateY(30px);
     }
     100% {
       opacity: 1;
@@ -700,19 +872,25 @@ All colors MUST be HSL.
   @keyframes ios-stagger-up {
     0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(50px) scale(0.98);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
   }
 
   /* Button & Interactive Animations */
   @keyframes ios-button-press {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.97); }
-    100% { transform: scale(1); }
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.97);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   @keyframes ios-modal-enter {
@@ -739,7 +917,8 @@ All colors MUST be HSL.
 
   /* Background & Environmental Effects */
   @keyframes ios-parallax-float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) translateX(0px);
     }
     25% {
@@ -754,7 +933,8 @@ All colors MUST be HSL.
   }
 
   @keyframes ios-glow-pulse {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
     }
     50% {
@@ -780,7 +960,8 @@ All colors MUST be HSL.
   }
 
   @keyframes ios-bg-parallax {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1) translateY(0px);
     }
     50% {
@@ -789,7 +970,7 @@ All colors MUST be HSL.
   }
 
   /* ====== ANIMATION CLASSES ====== */
-  
+
   /* Page & Section Animations */
   .ios-page-enter {
     animation: ios-page-enter 0.6s var(--ios-ease) forwards;
@@ -797,31 +978,23 @@ All colors MUST be HSL.
 
   .ios-text-reveal {
     opacity: 0;
-    animation: ios-text-reveal 0.8s var(--ios-ease) forwards;
+    animation: ios-text-reveal 1s var(--ios-ease) forwards;
   }
 
   .ios-text-reveal-delay {
     opacity: 0;
-    animation: ios-text-reveal 0.8s var(--ios-ease) 0.2s forwards;
+    animation: ios-text-reveal 1s var(--ios-ease) 0.2s forwards;
   }
 
   .ios-scale-enter {
     opacity: 0;
-    animation: ios-scale-enter 0.6s var(--ios-ease) forwards;
+    animation: ios-scale-enter 0.8s var(--ios-ease) forwards;
   }
 
   .ios-stagger-enter {
     opacity: 0;
-    animation: ios-stagger-up 0.6s var(--ios-ease) forwards;
+    animation: ios-stagger-up 0.8s var(--ios-ease) forwards;
   }
-
-  /* Stagger delays for service cards */
-  .ios-stagger-1 { animation-delay: 0.1s; }
-  .ios-stagger-2 { animation-delay: 0.2s; }
-  .ios-stagger-3 { animation-delay: 0.3s; }
-  .ios-stagger-4 { animation-delay: 0.4s; }
-  .ios-stagger-5 { animation-delay: 0.5s; }
-  .ios-stagger-6 { animation-delay: 0.6s; }
 
   /* Interactive Elements */
   .ios-button {
@@ -890,7 +1063,11 @@ All colors MUST be HSL.
 
   .ios-particle {
     position: absolute;
-    background: linear-gradient(45deg, hsl(var(--primary) / 0.08), hsl(var(--primary) / 0.04));
+    background: linear-gradient(
+      45deg,
+      hsl(var(--primary) / 0.08),
+      hsl(var(--primary) / 0.04)
+    );
     border-radius: 50%;
     animation: ios-particle-drift linear infinite;
   }
