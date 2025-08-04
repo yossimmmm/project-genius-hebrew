@@ -42,13 +42,13 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Service Tags - Premium iOS Style */}
+          {/* Service Tags - Premium Purple Style */}
           <div className="space-y-6 ios-fade-up">
-            <div className="flex flex-wrap justify-center gap-2 max-w-lg mx-auto ios-stagger-enter">
-              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-3 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">עבודות גמר</span>
-              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-4 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">תרגילים</span>
-              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-5 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">קורסים</span>
-              <span className="bg-white/10 backdrop-blur-md text-foreground px-4 py-2 rounded-full border border-white/20 ios-stagger-6 text-center text-xs md:text-sm font-medium shadow-lg hover:bg-white/15 transition-all duration-300">ליווי אישי</span>
+            <div className="flex flex-wrap justify-center gap-3 max-w-lg mx-auto ios-stagger-enter">
+              <HeroButton variant="xy" size="sm" className="ios-stagger-3">עבודות גמר</HeroButton>
+              <HeroButton variant="xy" size="sm" className="ios-stagger-4">תרגילים</HeroButton>
+              <HeroButton variant="xy" size="sm" className="ios-stagger-5">קורסים</HeroButton>
+              <HeroButton variant="xy" size="sm" className="ios-stagger-6">ליווי אישי</HeroButton>
             </div>
           </div>
 
