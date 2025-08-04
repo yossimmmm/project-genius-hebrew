@@ -75,11 +75,14 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+        <div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
+          data-stagger="ios-stagger-enter"
+        >
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-3xl p-6 hover:bg-card hover:border-primary/30 ios-card ios-stagger-enter ios-stagger-${(index % 6) + 1} hover:shadow-xl hover:shadow-primary/10 transition-all duration-300`}
+              className="group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-3xl p-6 hover:bg-card hover:border-primary/30 ios-card hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
               {/* Icon */}
               <div className="flex justify-center mb-4">
