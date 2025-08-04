@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-20 relative overflow-hidden">
+    <section id="testimonials" className="py-20 relative overflow-hidden" data-animate="ios-page-enter">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background"></div>
       <div 

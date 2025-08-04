@@ -60,7 +60,7 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section className="py-24 relative" id="portfolio">
+    <section className="py-24 relative" id="portfolio" data-animate="ios-page-enter">
       {/* Background Elements */}
       <div className="absolute inset-0 apple-overlay opacity-30"></div>
       
