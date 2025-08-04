@@ -1,16 +1,6 @@
 import { useEffect } from "react";
 
-/**
- * Attaches an IntersectionObserver to elements marked with `data-animate`
- * or `data-stagger`.
- *
- * `data-animate="ios-page-enter"` will apply the class to the element when it
- * enters the viewport.
- *
- * `data-stagger="ios-stagger-enter"` will apply the animation class to each
- * direct child with an increasing delay, creating iOS-style staggered
- * animations.
- */
+
 export const useScrollAnimations = () => {
   useEffect(() => {
     const elements = document.querySelectorAll<HTMLElement>(
@@ -22,6 +12,7 @@ export const useScrollAnimations = () => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
             const animation = el.dataset.animate;
+
             const stagger = el.dataset.stagger;
 
             if (animation) {
@@ -34,6 +25,10 @@ export const useScrollAnimations = () => {
                 child.classList.add(stagger);
               });
               el.removeAttribute("data-stagger");
+            }
+            if (animation) {
+              el.classList.add(animation);
+              el.removeAttribute("data-animate");
             }
 
             observer.unobserve(el);

@@ -12,10 +12,6 @@ const AnimatedBackground = () => {
     const el = ref.current;
     if (!el) return;
 
-    // Respect users that prefer reduced motion by skipping interactive effects
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return;
-    }
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = el.getBoundingClientRect();
