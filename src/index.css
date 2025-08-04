@@ -159,38 +159,40 @@ All colors MUST be HSL.
     transition: var(--transition-bounce);
   }
   
-  /* ====== PREMIUM APPLE-INSPIRED BACKGROUNDS ====== */
+  /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
   
-  /* Main Animated Gradient - Apple Style - Smoother */
+  /* Deep Purple & Midnight Blue Flowing Gradient */
   .animated-gradient {
     background: linear-gradient(135deg, 
-      hsl(259 100% 65% / 0.08), 
-      hsl(220 100% 60% / 0.06), 
-      hsl(280 100% 70% / 0.04), 
-      hsl(300 80% 65% / 0.03));
-    background-size: 600% 600%;
-    animation: appleGradientFlow 35s ease-in-out infinite;
+      hsl(264 83% 25% / 0.12), 
+      hsl(230 100% 8% / 0.08), 
+      hsl(264 83% 35% / 0.06), 
+      hsl(230 100% 12% / 0.04));
+    background-size: 400% 400%;
+    animation: elegantGradientFlow 25s ease-in-out infinite;
   }
   
-  /* Premium Fluid Gradient - Enhanced */
+  /* Fluid Particle Movement */
   .apple-fluid-bg {
     background: 
-      radial-gradient(circle at 20% 20%, hsl(259 100% 65% / 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 80% 40%, hsl(220 100% 60% / 0.04) 0%, transparent 60%),
-      radial-gradient(circle at 40% 80%, hsl(280 100% 70% / 0.03) 0%, transparent 70%),
-      radial-gradient(circle at 90% 90%, hsl(300 80% 65% / 0.02) 0%, transparent 50%);
-    animation: fluidMovement 40s ease-in-out infinite;
+      radial-gradient(ellipse at 15% 25%, hsl(264 83% 25% / 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 85% 45%, hsl(230 100% 8% / 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse at 35% 85%, hsl(264 83% 35% / 0.04) 0%, transparent 80%),
+      radial-gradient(ellipse at 75% 15%, hsl(230 100% 12% / 0.03) 0%, transparent 65%),
+      radial-gradient(ellipse at 95% 75%, hsl(264 83% 30% / 0.02) 0%, transparent 55%);
+    animation: flowingParticles 30s ease-in-out infinite;
   }
   
-  /* Subtle Overlay Gradient */
+  /* Subtle Wave Overlay */
   .apple-overlay {
-    background: linear-gradient(45deg, 
-      hsl(259 100% 65% / 0.02), 
-      transparent 30%, 
-      hsl(220 100% 60% / 0.01) 60%, 
-      transparent);
-    background-size: 200% 200%;
-    animation: overlayShift 20s linear infinite;
+    background: linear-gradient(60deg, 
+      hsl(264 83% 25% / 0.03), 
+      transparent 25%, 
+      hsl(230 100% 8% / 0.02) 50%, 
+      transparent 75%,
+      hsl(264 83% 35% / 0.01));
+    background-size: 300% 300%;
+    animation: waveOverlay 18s linear infinite;
   }
   
   /* Interactive Gradient (responds to scroll/mouse) */
@@ -348,51 +350,50 @@ All colors MUST be HSL.
 @layer utilities {
   /* ====== APPLE-INSPIRED BACKGROUND KEYFRAMES ====== */
   
-  /* Premium Apple Gradient Flow - Smoother */
-  @keyframes appleGradientFlow {
+  /* Elegant Deep Purple & Midnight Blue Flow */
+  @keyframes elegantGradientFlow {
     0%, 100% { 
-      background-position: 0% 0%; 
-      filter: blur(0px);
+      background-position: 0% 30%; 
+      opacity: 0.95;
+    }
+    25% { 
+      background-position: 100% 70%; 
+      opacity: 1;
+    }
+    50% { 
+      background-position: 30% 100%; 
       opacity: 0.9;
     }
-    25% { 
-      background-position: 100% 50%; 
-      filter: blur(0.3px);
-      opacity: 1;
-    }
-    50% { 
-      background-position: 50% 100%; 
-      filter: blur(0px);
-      opacity: 0.8;
-    }
     75% { 
-      background-position: 0% 50%; 
-      filter: blur(0.3px);
+      background-position: 70% 0%; 
       opacity: 1;
     }
   }
 
-  /* Fluid Movement Animation - Enhanced */
-  @keyframes fluidMovement {
+  /* Flowing Particles Animation */
+  @keyframes flowingParticles {
     0%, 100% { 
-      transform: translateX(0) translateY(0) rotate(0deg) scale(1); 
+      transform: translateX(0) translateY(0) rotate(0deg); 
     }
-    25% { 
-      transform: translateX(30px) translateY(-15px) rotate(1deg) scale(1.02); 
+    20% { 
+      transform: translateX(15px) translateY(-10px) rotate(0.5deg); 
     }
-    50% { 
-      transform: translateX(-15px) translateY(25px) rotate(-0.5deg) scale(0.98); 
+    40% { 
+      transform: translateX(-8px) translateY(12px) rotate(-0.3deg); 
     }
-    75% { 
-      transform: translateX(20px) translateY(-10px) rotate(0.5deg) scale(1.01); 
+    60% { 
+      transform: translateX(12px) translateY(-6px) rotate(0.2deg); 
+    }
+    80% { 
+      transform: translateX(-5px) translateY(8px) rotate(-0.1deg); 
     }
   }
 
-  /* Subtle Overlay Shift */
-  @keyframes overlayShift {
+  /* Gentle Wave Overlay */
+  @keyframes waveOverlay {
     0% { background-position: 0% 0%; }
-    33% { background-position: 100% 50%; }
-    66% { background-position: 50% 100%; }
+    30% { background-position: 100% 40%; }
+    60% { background-position: 40% 100%; }
     100% { background-position: 0% 0%; }
   }
 
