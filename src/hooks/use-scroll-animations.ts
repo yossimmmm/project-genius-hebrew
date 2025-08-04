@@ -9,6 +9,30 @@ export const useScrollAnimations = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
+          const animation = el.dataset.animate;
+          const stagger = el.dataset.stagger;
+
+          if (entry.isIntersecting) {
+            if (animation) {
+              el.classList.add(animation);
+            } else if (stagger) {
+              const children = el.querySelectorAll<HTMLElement>(":scope > *");
+              children.forEach((child, index) => {
+                child.style.animationDelay = `${index * 150}ms`;
+                child.classList.add(stagger);
+              });
+            }
+          } else {
+            if (animation) {
+              el.classList.remove(animation);
+            } else if (stagger) {
+              const children = el.querySelectorAll<HTMLElement>(":scope > *");
+              children.forEach((child) => {
+                child.classList.remove(stagger);
+                child.style.animationDelay = "";
+              });
+            }
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
             const animation = el.dataset.animate;
