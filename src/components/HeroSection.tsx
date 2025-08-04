@@ -21,11 +21,11 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8 ios-scale-enter">
             <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card ios-stagger-1">
               <Users className="w-4 h-4 text-primary" />
-              <span className="text-foreground font-medium text-sm">200+ לקוחות מרוצים</span>
+              <span className="text-foreground font-medium text-sm">מעל 250 לקוחות מרוצים</span>
             </div>
             <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card ios-stagger-2">
               <GraduationCap className="w-4 h-4 text-primary" />
-              <span className="text-foreground font-medium text-sm">60+ סטודנטים שסיימו תואר</span>
+              <span className="text-foreground font-medium text-sm">ציון ממוצע 90+</span>
             </div>
           </div>
 
@@ -33,19 +33,19 @@ const HeroSection = () => {
           <div className="space-y-4 ios-text-reveal">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-heebo">
               <span className="text-foreground font-bold block">
-                אין לכם ז*ן לעשות פרויקט? לנו יש.
+                אין לך זמן או חשק לפרויקט? לנו יש.
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-light leading-relaxed ios-text-reveal-delay">
-              מומחים בכל תחום אקדמי, עם בקרת איכות כפולה והגשה מדויקת בזמן
+              פתרונות אקדמיים מותאמים אישית, עם בקרת איכות כפולה והגשה בזמן.
             </p>
           </div>
 
           {/* Service Tags - Better Mobile Layout */}
           <div className="space-y-6 ios-fade-up">
             <p className="text-base md:text-lg text-muted-foreground font-light">
-              מתמחים בביצוע פרויקטים לסטודנטים בכל תחום ותואר
+              תשאירו את הכאב ראש והעבודה השחורה לנו.
             </p>
             <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 max-w-2xl mx-auto ios-stagger-enter">
               <span className="bg-primary/10 text-primary px-3 py-2 rounded-xl border border-primary/20 ios-stagger-3 text-center text-sm md:text-base">עבודות גמר</span>
