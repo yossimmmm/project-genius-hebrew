@@ -10,10 +10,12 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background font-inter relative overflow-hidden">
-      {/* Premium Apple-inspired Background */}
+      {/* Premium Fluid Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 animated-gradient"></div>
-        <div className="absolute inset-0 apple-fluid-bg"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/lovable-uploads/a06eb28f-8df6-4c91-bad5-b787d2985600.png)' }}
+        ></div>
         <div className="absolute inset-0 apple-overlay"></div>
       </div>
       
