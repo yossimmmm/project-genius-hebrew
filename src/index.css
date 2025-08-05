@@ -154,14 +154,12 @@ All colors MUST be HSL.
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-
   .transition-bounce {
     transition: var(--transition-bounce);
   }
-
-  /* ====== ELEGANT FLOWING MOTION BACKGROUNDS ====== */
-
-  /* Deep Purple & Midnight Blue Flowing Gradient */
+  .animated-background {
+    will-change: transform;
+  }
     .animated-gradient {
       background: linear-gradient(135deg,
         hsl(264 83% 25% / 0.25),
@@ -652,50 +650,16 @@ All colors MUST be HSL.
     transform: translateY(0);
   }
 
-  /* Breathing effect */
-  @keyframes breathe {
-    0%, 100% { 
-      transform: scale(1); 
-      opacity: 0.9; 
-    }
-    50% { 
-      transform: scale(1.01); 
-      opacity: 1; 
-    }
-  }
-
   .breathe {
     animation: breathe 4s ease-in-out infinite;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
+
   .animate-fadeInUp {
     animation: fadeInUp 0.8s ease-out forwards;
   }
-  
+
   .animate-slideInRight {
-    animation: slideInRight 0.8s ease-out forwards;
+    animation: slideInFromRight 0.8s ease-out forwards;
   }
   
   .animate-delay-200 {
