@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import geometricBg from "@/assets/geometric-bg.jpg";
 
 /**
  * AnimatedBackground renders the luxurious animated gradient backdrop.
@@ -53,11 +54,6 @@ const AnimatedBackground = () => {
         scrollFrame = null;
       });
     };
-
-    window.addEventListener("pointermove", handleMouseMove, { passive: true });
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", updateRect);
-
     return () => {
       window.removeEventListener("pointermove", handleMouseMove);
       window.removeEventListener("scroll", handleScroll);
@@ -68,8 +64,6 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-    <div ref={ref} className="absolute inset-0 animated-background pointer-events-none">
-      {/* Wrap gradient layers in a single non-interactive container to keep JSX valid */}
       <div className="absolute inset-0 animated-gradient" />
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />
