@@ -90,14 +90,15 @@ const TestimonialsSection = () => {
             <div className="flex justify-center mb-6">
               <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star 
-                    key={star} 
-                    className={`w-6 h-6 ${
-                      star <= currentTestimonial.rating 
-                        ? 'fill-yellow-400 text-yellow-400' 
-                        : 'text-gray-300'
-                    } transition-colors duration-300`}
-                  />
+                  <div key={star} className="w-8 h-8 bg-yellow-400/10 backdrop-blur-sm rounded-lg border border-yellow-400/20 flex items-center justify-center hover:bg-yellow-400/15 transition-all duration-300">
+                    <Star 
+                      className={`w-5 h-5 ${
+                        star <= currentTestimonial.rating 
+                          ? 'fill-yellow-400 text-yellow-400' 
+                          : 'text-gray-300'
+                      } transition-colors duration-300`}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

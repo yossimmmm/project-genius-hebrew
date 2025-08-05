@@ -20,11 +20,15 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-4 mb-8 ios-scale-enter">
             <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card ios-stagger-1">
-              <Users className="w-4 h-4 text-primary" />
+              <div className="w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-primary/20">
+                <Users className="w-4 h-4 text-primary" />
+              </div>
               <span className="text-foreground font-medium text-sm">מעל 250 לקוחות מרוצים</span>
             </div>
             <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm rounded-xl px-4 py-2 border border-border/20 ios-card ios-stagger-2">
-              <GraduationCap className="w-4 h-4 text-primary" />
+              <div className="w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-primary/20">
+                <GraduationCap className="w-4 h-4 text-primary" />
+              </div>
               <span className="text-foreground font-medium text-sm">ציון ממוצע 90+</span>
             </div>
           </div>
@@ -81,7 +85,9 @@ const HeroSection = () => {
             <p className="text-muted-foreground mb-3 text-sm">אמינות מוכחת</p>
             <div className="flex justify-center items-center gap-1">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400 transition-all duration-300 hover:scale-110" />
+                <div key={star} className="w-6 h-6 bg-yellow-400/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-yellow-400/20">
+                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 transition-all duration-300 hover:scale-110" />
+                </div>
               ))}
               <span className="text-foreground font-medium mr-2 text-sm">4.9/5</span>
               <span className="text-muted-foreground text-sm">ממוצע ביקורות</span>

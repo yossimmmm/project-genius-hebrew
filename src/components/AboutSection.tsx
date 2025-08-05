@@ -84,9 +84,9 @@ const AboutSection = () => {
                       <span className="text-sm font-bold text-primary">{step.number}</span>
                     </div>
                     
-                    {/* Icon - Smaller size */}
+                    {/* Icon - Glass effect */}
                     <div className="text-primary mb-6 flex justify-center">
-                      <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center hover:bg-primary/15 transition-all duration-300">
                         {step.icon}
                       </div>
                     </div>
@@ -114,7 +114,7 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {whyChooseUs.map((item, index) => (
               <div key={index} className="flex items-center gap-3 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-primary/10">
-                <div className="text-primary flex-shrink-0">
+                <div className="w-8 h-8 bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/20 flex items-center justify-center flex-shrink-0">
                   {item.icon}
                 </div>
                 <span className="font-medium text-foreground">{item.text}</span>
@@ -130,29 +130,29 @@ const AboutSection = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <div className="space-y-2">
-              <div className="text-primary">
-                <Shield className="w-8 h-8 mx-auto" />
+              <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center mx-auto hover:bg-primary/15 transition-all duration-300">
+                <Shield className="w-8 h-8 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground">עבודה אנונימית</h4>
               <p className="text-sm text-muted-foreground">פרטיותכם מובטחת</p>
             </div>
             <div className="space-y-2">
-              <div className="text-primary">
-                <CheckCircle className="w-8 h-8 mx-auto" />
+              <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center mx-auto hover:bg-primary/15 transition-all duration-300">
+                <CheckCircle className="w-8 h-8 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground">תשלומים מאובטחים</h4>
               <p className="text-sm text-muted-foreground">בטחון מלא בכל עסקה</p>
             </div>
             <div className="space-y-2">
-              <div className="text-primary">
-                <Users className="w-8 h-8 mx-auto" />
+              <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center mx-auto hover:bg-primary/15 transition-all duration-300">
+                <Users className="w-8 h-8 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground">ביקורות אמיתיות</h4>
               <p className="text-sm text-muted-foreground">מלקוחות מרוצים</p>
             </div>
             <div className="space-y-2">
-              <div className="text-primary">
-                <FolderOpen className="w-8 h-8 mx-auto" />
+              <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center mx-auto hover:bg-primary/15 transition-all duration-300">
+                <FolderOpen className="w-8 h-8 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground">פרויקטים מותאמים</h4>
               <p className="text-sm text-muted-foreground">כל עבודה ייחודית</p>

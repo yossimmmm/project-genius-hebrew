@@ -83,7 +83,7 @@ const ServicesSection = () => {
             >
               {/* Icon */}
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/5 rounded-full flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-300 group-hover:scale-105 shadow-lg shadow-primary/5">
+                <div className="w-16 h-16 bg-primary/10 backdrop-blur-sm rounded-2xl border border-primary/20 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300 group-hover:scale-105 shadow-lg shadow-primary/5">
                   <service.icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:rotate-6" />
                 </div>
               </div>

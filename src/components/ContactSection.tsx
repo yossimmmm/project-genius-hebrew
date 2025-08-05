@@ -90,9 +90,9 @@ const ContactSection = () => {
 
             {/* Contact Methods */}
             <div className="space-y-6">
-              <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl hover-scale transition-all duration-300">
-                <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 p-4 bg-card/60 backdrop-blur-sm border border-border rounded-xl hover-scale transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center hover:bg-primary/15 transition-all duration-300">
+                  <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-semibold">טלפון / וואטסאפ</h4>
@@ -100,9 +100,9 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl hover-scale transition-all duration-300">
-                <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 p-4 bg-card/60 backdrop-blur-sm border border-border rounded-xl hover-scale transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center hover:bg-primary/15 transition-all duration-300">
+                  <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-semibold">אימייל</h4>
@@ -110,9 +110,9 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl hover-scale transition-all duration-300">
-                <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 p-4 bg-card/60 backdrop-blur-sm border border-border rounded-xl hover-scale transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center hover:bg-primary/15 transition-all duration-300">
+                  <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-semibold">זמני פעילות</h4>
@@ -120,9 +120,9 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl hover-scale transition-all duration-300">
-                <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-4 p-4 bg-card/60 backdrop-blur-sm border border-border rounded-xl hover-scale transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center hover:bg-primary/15 transition-all duration-300">
+                  <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-semibold">מיקום</h4>

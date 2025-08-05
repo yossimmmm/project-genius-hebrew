@@ -84,7 +84,7 @@ const PortfolioSection = () => {
               >
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between mb-6">
-                    <div className="p-3 rounded-xl bg-white/10 backdrop-blur-sm">
+                    <div className="w-14 h-14 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center hover:bg-primary/15 transition-all duration-300">
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
                     <div className="text-left">
