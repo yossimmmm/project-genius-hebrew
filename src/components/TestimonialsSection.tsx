@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-20 relative overflow-hidden" data-animate="ios-page-enter">
+    <section id="testimonials" className="py-20 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background"></div>
       <div 
@@ -155,19 +155,16 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Stats Grid */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
-          data-stagger="ios-stagger-enter"
-        >
-          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card ios-stagger-enter ios-stagger-1">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">200+</div>
             <div className="text-muted-foreground">לקוחות מרוצים</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card">
+          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card ios-stagger-enter ios-stagger-2">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">4.9/5</div>
             <div className="text-muted-foreground">ממוצע ביקורות</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card">
+          <div className="text-center p-6 bg-card border border-border rounded-2xl ios-card ios-stagger-enter ios-stagger-3">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">60+</div>
             <div className="text-muted-foreground">סטודנטים שסיימו תואר איתנו</div>
           </div>

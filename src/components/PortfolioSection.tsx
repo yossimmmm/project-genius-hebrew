@@ -60,7 +60,7 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section className="py-24 relative" id="portfolio" data-animate="ios-page-enter">
+    <section className="py-24 relative" id="portfolio">
       {/* Background Elements */}
       <div className="absolute inset-0 apple-overlay opacity-30"></div>
       
@@ -74,16 +74,13 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
-          data-stagger="ios-stagger-enter"
-        >
-          {projects.map((project) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {projects.map((project, index) => {
             const Icon = project.icon;
             return (
               <Card
                 key={project.id}
-                className={`bg-gradient-to-br ${getGradientClass(project.type)} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 ios-card group overflow-hidden`}
+                className={`bg-gradient-to-br ${getGradientClass(project.type)} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 ios-card ios-stagger-${index + 1} group overflow-hidden`}
               >
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between mb-6">

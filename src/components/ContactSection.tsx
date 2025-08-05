@@ -58,7 +58,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden" data-animate="ios-page-enter">
+    <section id="contact" className="py-20 relative overflow-hidden">
       {/* Premium background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-muted/20"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.05),transparent_70%)]"></div>

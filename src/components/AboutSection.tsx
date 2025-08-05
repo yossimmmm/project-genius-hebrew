@@ -53,7 +53,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-32 relative" id="about" data-animate="ios-page-enter">
+    <section className="py-32 relative" id="about">
       {/* Background Elements */}
       <div className="absolute inset-0 apple-overlay opacity-20"></div>
       

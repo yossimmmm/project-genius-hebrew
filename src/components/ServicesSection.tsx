@@ -57,7 +57,7 @@ const ServicesSection = () => {
   const whatsappUrl = `https://wa.me/972509888175?text=${whatsappMessage}`;
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden" data-animate="ios-page-enter">
+    <section id="services" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/95 to-background"></div>
       <div className="absolute inset-0 animated-gradient opacity-10"></div>
@@ -75,14 +75,11 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
-          data-stagger="ios-stagger-enter"
-        >
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-3xl p-6 hover:bg-card hover:border-primary/30 ios-card hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              className={`group relative bg-card/60 backdrop-blur-sm border border-border/50 rounded-3xl p-6 hover:bg-card hover:border-primary/30 ios-card ios-stagger-enter ios-stagger-${(index % 6) + 1} hover:shadow-xl hover:shadow-primary/10 transition-all duration-300`}
             >
               {/* Icon */}
               <div className="flex justify-center mb-4">
