@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import geometricBg from "@/assets/geometric-bg.jpg";
 
 /**
  * AnimatedBackground renders the luxurious animated gradient backdrop.
@@ -31,6 +32,13 @@ const AnimatedBackground = () => {
     const handleMouseMove = (e: PointerEvent) => {
       if (mouseFrame !== null) return;
       mouseFrame = requestAnimationFrame(() => {
+    let mouseFrame: number | null = null;
+    let scrollFrame: number | null = null;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (mouseFrame !== null) return;
+      mouseFrame = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * 100;
         const y = ((e.clientY - rect.top) / rect.height) * 100;
         el.style.setProperty("--mouse-x", `${x}%`);
@@ -51,7 +59,8 @@ const AnimatedBackground = () => {
     window.addEventListener("pointermove", handleMouseMove, { passive: true });
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", updateRect);
-
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("pointermove", handleMouseMove);
       window.removeEventListener("scroll", handleScroll);
@@ -68,6 +77,17 @@ const AnimatedBackground = () => {
       <div className="absolute inset-0 apple-fluid-bg"></div>
       <div className="absolute inset-0 apple-overlay"></div>
       <div className="absolute inset-0 interactive-gradient"></div>
+    <div 
+      ref={ref}
+      className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(/lovable-uploads/56ff906e-9cdc-4c8c-8c41-90ff009be4ab.png)`
+      }}
+    >
+      <div className="absolute inset-0 animated-gradient" />
+      <div className="absolute inset-0 apple-fluid-bg" />
+      <div className="absolute inset-0 apple-overlay" />
+      <div className="absolute inset-0 interactive-gradient" />
     </div>
   );
 };
