@@ -926,6 +926,18 @@ All colors MUST be HSL.
     animation-delay: 2s;
   }
 
+  /* Translucent backdrop with blur; falls back to solid color if blur isn't supported */
+  .ios-glass {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  @supports not ((backdrop-filter: blur(0))) {
+    .ios-glass {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
   /* Scroll-triggered animations */
   .ios-fade-up {
     opacity: 0;
