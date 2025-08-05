@@ -9,9 +9,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Clean Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/98 to-background/95"></div>
-      <div className="absolute inset-0 apple-overlay opacity-3"></div>
+      {/* Fluid Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/lovable-uploads/a06eb28f-8df6-4c91-bad5-b787d2985600.png)' }}
+      ></div>
+      <div className="absolute inset-0 apple-overlay opacity-30"></div>
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 text-center max-w-6xl">
