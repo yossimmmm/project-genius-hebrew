@@ -102,7 +102,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary ios-nav"
+              className="w-10 h-10 bg-card/40 backdrop-blur-sm rounded-xl border border-border/30 text-foreground hover:text-primary hover:bg-card/60 hover:border-primary/30 ios-nav transition-all duration-300 flex items-center justify-center"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

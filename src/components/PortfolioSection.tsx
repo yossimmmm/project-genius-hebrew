@@ -118,9 +118,11 @@ const PortfolioSection = () => {
                 <CardFooter className="p-8 pt-0">
                   <Button 
                     variant="outline" 
-                    className="w-full bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-primary/50 ios-button group"
+                    className="w-full bg-card/40 backdrop-blur-sm border-border/30 text-foreground hover:bg-card/60 hover:border-primary/50 ios-button group transition-all duration-300"
                   >
-                    <Eye className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/20 flex items-center justify-center mr-2">
+                      <Eye className="w-4 h-4" />
+                    </div>
                     צפייה בדוגמה
                     <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                   </Button>
@@ -137,11 +139,13 @@ const PortfolioSection = () => {
           </p>
           <Button 
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl ios-button font-semibold"
+            className="bg-primary/90 backdrop-blur-sm border border-primary/20 hover:bg-primary text-white px-8 py-3 rounded-xl ios-button font-semibold transition-all duration-300"
             onClick={() => window.open('https://wa.me/972509888175?text=' + encodeURIComponent("היי, אשמח לראות עוד דוגמאות עבודות"), '_blank')}
           >
             בואו נדבר
-            <ArrowLeft className="w-5 h-5 mr-2" />
+            <div className="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30 flex items-center justify-center mr-2">
+              <ArrowLeft className="w-5 h-5" />
+            </div>
           </Button>
         </div>
       </div>

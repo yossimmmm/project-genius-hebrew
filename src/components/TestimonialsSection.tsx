@@ -125,7 +125,7 @@ const TestimonialsSection = () => {
             <div className="flex justify-center items-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
-                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 ios-button"
+                className="p-3 bg-card/40 backdrop-blur-sm rounded-full border border-border/30 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 ios-button"
               >
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -136,10 +136,10 @@ const TestimonialsSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-6 h-6 backdrop-blur-sm rounded-lg border transition-all duration-300 ${
                       index === currentIndex 
-                        ? 'bg-primary scale-125' 
-                        : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                        ? 'bg-primary/80 border-primary/60 scale-125' 
+                        : 'bg-card/40 border-border/30 hover:bg-card/60 hover:border-primary/30'
                     }`}
                   />
                 ))}
@@ -147,7 +147,7 @@ const TestimonialsSection = () => {
 
               <button
                 onClick={nextTestimonial}
-                className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 ios-button"
+                className="p-3 bg-card/40 backdrop-blur-sm rounded-full border border-border/30 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 ios-button"
               >
                 <ArrowLeft className="w-5 h-5" />
               </button>
