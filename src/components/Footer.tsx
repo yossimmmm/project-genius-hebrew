@@ -30,12 +30,12 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <h4 className="text-2xl font-bold text-foreground mb-8">יצירת קשר</h4>
-              <div className="space-y-6">
+               <div className="space-y-6">
                 <a 
                   href="tel:+972509888175" 
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-all duration-300 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
+                  <div className="w-10 h-10 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
                     <Phone className="w-5 h-5" />
                   </div>
                   <span className="text-lg">050-988-8175</span>
@@ -47,7 +47,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-green-400 transition-all duration-300 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-green-500/20 to-green-400/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-green-400/30 transition-all duration-300">
+                  <div className="w-10 h-10 bg-green-500/10 backdrop-blur-sm rounded-xl border border-green-500/20 flex items-center justify-center group-hover:bg-green-500/15 transition-all duration-300">
                     <MessageCircle className="w-5 h-5" />
                   </div>
                   <span className="text-lg">WhatsApp</span>
@@ -57,7 +57,7 @@ const Footer = () => {
                   href="mailto:projectssos@gmail.com" 
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-all duration-300 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
+                  <div className="w-10 h-10 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
                   <span className="text-lg">projectssos@gmail.com</span>
@@ -96,21 +96,21 @@ const Footer = () => {
             {/* Stats & Guarantees */}
             <div className="space-y-6">
               <h4 className="text-2xl font-bold text-foreground mb-6">למה לבחור בנו</h4>
-              <div className="space-y-4">
+               <div className="space-y-4">
                 <div className="flex items-center gap-4 text-muted-foreground group">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-yellow-500/20 to-yellow-400/20 flex items-center justify-center">
+                  <div className="w-10 h-10 bg-yellow-400/10 backdrop-blur-sm rounded-xl border border-yellow-400/20 flex items-center justify-center hover:bg-yellow-400/15 transition-all duration-300">
                     <Award className="w-5 h-5 text-yellow-400" />
                   </div>
                   <span className="text-lg">200+ לקוחות מרוצים</span>
                 </div>
                 <div className="flex items-center gap-4 text-muted-foreground group">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-green-500/20 to-green-400/20 flex items-center justify-center">
+                  <div className="w-10 h-10 bg-green-400/10 backdrop-blur-sm rounded-xl border border-green-400/20 flex items-center justify-center hover:bg-green-400/15 transition-all duration-300">
                     <Clock className="w-5 h-5 text-green-400" />
                   </div>
                   <span className="text-lg">מסירה בזמן מובטחת</span>
                 </div>
                 <div className="flex items-center gap-4 text-muted-foreground group">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-500/20 to-blue-400/20 flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-400/10 backdrop-blur-sm rounded-xl border border-blue-400/20 flex items-center justify-center hover:bg-blue-400/15 transition-all duration-300">
                     <Shield className="w-5 h-5 text-blue-400" />
                   </div>
                   <span className="text-lg">אחריות מלאה על העבודה</span>
@@ -123,12 +123,16 @@ const Footer = () => {
               <h4 className="text-2xl font-bold text-foreground mb-6">אבטחה ואמינות</h4>
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-3">
-                  <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-3 hover:border-primary/50 transition-all duration-300">
-                    <Shield className="w-4 h-4 text-green-400" />
+                  <div className="flex items-center gap-2 bg-card/60 backdrop-blur-sm border border-border rounded-lg px-4 py-3 hover:border-primary/50 transition-all duration-300">
+                    <div className="w-6 h-6 bg-green-400/10 backdrop-blur-sm rounded-lg border border-green-400/20 flex items-center justify-center">
+                      <Shield className="w-4 h-4 text-green-400" />
+                    </div>
                     <span className="text-sm font-medium">אבטחת מידע</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-3 hover:border-primary/50 transition-all duration-300">
-                    <Lock className="w-4 h-4 text-blue-400" />
+                  <div className="flex items-center gap-2 bg-card/60 backdrop-blur-sm border border-border rounded-lg px-4 py-3 hover:border-primary/50 transition-all duration-300">
+                    <div className="w-6 h-6 bg-blue-400/10 backdrop-blur-sm rounded-lg border border-blue-400/20 flex items-center justify-center">
+                      <Lock className="w-4 h-4 text-blue-400" />
+                    </div>
                     <span className="text-sm font-medium">תשלומים מאובטחים</span>
                   </div>
                 </div>

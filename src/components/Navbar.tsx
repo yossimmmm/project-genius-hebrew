@@ -80,7 +80,9 @@ const Navbar = () => {
               onClick={() => scrollToSection('contact')}
               className="ios-button"
             >
-              <Phone className="w-4 h-4 ml-2" />
+              <div className="w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/20 flex items-center justify-center mr-2">
+                <Phone className="w-4 h-4" />
+              </div>
               צור קשר
             </HeroButton>
             <HeroButton 
@@ -89,7 +91,9 @@ const Navbar = () => {
               onClick={() => window.open(whatsappUrl, '_blank')}
               className="ios-button"
             >
-              <MessageCircle className="w-4 h-4 ml-2" />
+              <div className="w-6 h-6 bg-green-400/10 backdrop-blur-sm rounded-lg border border-green-400/20 flex items-center justify-center mr-2">
+                <MessageCircle className="w-4 h-4" />
+              </div>
               וואטסאפ
             </HeroButton>
           </div>
@@ -148,7 +152,9 @@ const Navbar = () => {
                 }}
                 className="w-full ios-button"
               >
-                <Phone className="w-4 h-4 ml-2" />
+                <div className="w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/20 flex items-center justify-center mr-2">
+                  <Phone className="w-4 h-4" />
+                </div>
                 צור קשר
               </HeroButton>
               <HeroButton 
@@ -160,7 +166,9 @@ const Navbar = () => {
                 }}
                 className="w-full ios-button"
               >
-                <MessageCircle className="w-4 h-4 ml-2" />
+                <div className="w-6 h-6 bg-green-400/10 backdrop-blur-sm rounded-lg border border-green-400/20 flex items-center justify-center mr-2">
+                  <MessageCircle className="w-4 h-4" />
+                </div>
                 וואטסאפ
               </HeroButton>
             </div>
