@@ -49,7 +49,13 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-
+    <div 
+      ref={ref}
+      className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(/lovable-uploads/56ff906e-9cdc-4c8c-8c41-90ff009be4ab.png)`
+      }}
+    >
       <div className="absolute inset-0 animated-gradient" />
       <div className="absolute inset-0 apple-fluid-bg" />
       <div className="absolute inset-0 apple-overlay" />
