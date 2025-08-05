@@ -158,7 +158,11 @@ All colors MUST be HSL.
   .transition-bounce {
     transition: var(--transition-bounce);
   }
-  
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-sm border border-border/50;
+  }
+
   /* ====== PREMIUM APPLE-INSPIRED BACKGROUNDS ====== */
   
   /* Main Animated Gradient - Apple Style - Smoother */
