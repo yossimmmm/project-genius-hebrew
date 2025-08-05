@@ -46,18 +46,16 @@ const AnimatedBackground = () => {
     };
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!reduceMotion) {
-      window.addEventListener("pointermove", handleMouseMove, { passive: true });
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      window.addEventListener("resize", updateRect);
-    }
+    if (reduceMotion) return;
+
+    window.addEventListener("pointermove", handleMouseMove, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", updateRect);
 
     return () => {
-      if (!reduceMotion) {
-        window.removeEventListener("pointermove", handleMouseMove);
-        window.removeEventListener("scroll", handleScroll);
-        window.removeEventListener("resize", updateRect);
-      }
+      window.removeEventListener("pointermove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateRect);
       if (mouseFrame !== null) cancelAnimationFrame(mouseFrame);
       if (scrollFrame !== null) cancelAnimationFrame(scrollFrame);
     };
