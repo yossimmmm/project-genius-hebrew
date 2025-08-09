@@ -1,0 +1,80 @@
+:root {
+  --font-sans: "SF Pro Text", "SF Pro Display", Inter, sans-serif;
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-hairline: 0 1px 0 0 hsl(0 0% 0% / 0.05);
+  --shadow-soft: 0 8px 24px 0 hsl(0 0% 0% / 0.08);
+  --shadow-lifted: 0 16px 40px 0 hsl(0 0% 0% / 0.1);
+
+  /* Blur levels */
+  --blur-8: 8px;
+  --blur-16: 16px;
+  --blur-24: 24px;
+
+  /* Motion */
+  --timing-fast: 120ms;
+  --timing-base: 220ms;
+  --timing-slow: 360ms;
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Color system */
+  --gray-0: 0 0% 100%;
+  --gray-50: 240 4% 96%;
+  --gray-100: 240 5% 92%;
+  --gray-900: 0 0% 10%;
+
+  --accent-start: 220 90% 55%;
+  --accent-end: 230 90% 60%;
+  --accent-gradient: linear-gradient(135deg, hsl(var(--accent-start)), hsl(var(--accent-end)));
+
+  --surface-glass: hsla(0,0%,100%,0.08);
+  --surface-glass-border: hsla(0,0%,100%,0.25);
+  --surface-glass-highlight: hsla(0,0%,100%,0.3);
+}
+
+.dark {
+  --gray-0: 0 0% 10%;
+  --gray-50: 0 0% 12%;
+  --gray-100: 0 0% 20%;
+  --gray-900: 0 0% 98%;
+
+  --surface-glass: hsla(0,0%,0%,0.3);
+  --surface-glass-border: hsla(0,0%,100%,0.05);
+  --surface-glass-highlight: hsla(0,0%,100%,0.1);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    color: hsl(var(--gray-900));
+    background-color: hsl(var(--gray-50));
+    line-height: 1.7;
+  }
+
+  .dark body {
+    color: hsl(var(--gray-50));
+    background-color: hsl(var(--gray-0));
+  }
+}
+
+@layer components {
+  .glass {
+    background: var(--surface-glass);
+    backdrop-filter: blur(var(--blur-16));
+    -webkit-backdrop-filter: blur(var(--blur-16));
+    border: 1px solid var(--surface-glass-border);
+    box-shadow: var(--shadow-soft);
+  }
+}
