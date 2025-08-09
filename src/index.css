@@ -1,5 +1,3 @@
-@import "./styles/tokens.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -160,11 +158,7 @@ All colors MUST be HSL.
   .transition-bounce {
     transition: var(--transition-bounce);
   }
-
-  .glass-card {
-    @apply bg-card/60 backdrop-blur-sm border border-border/50;
-  }
-
+  
   /* ====== PREMIUM APPLE-INSPIRED BACKGROUNDS ====== */
   
   /* Main Animated Gradient - Apple Style - Smoother */
@@ -930,18 +924,6 @@ All colors MUST be HSL.
     left: 85%;
     animation-duration: 18s;
     animation-delay: 2s;
-  }
-
-  /* Translucent backdrop with blur; falls back to solid color if blur isn't supported */
-  .ios-glass {
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-  }
-  @supports not ((backdrop-filter: blur(0))) {
-    .ios-glass {
-      background-color: rgba(255, 255, 255, 0.8);
-    }
   }
 
   /* Scroll-triggered animations */

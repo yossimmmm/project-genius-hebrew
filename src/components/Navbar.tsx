@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle, Phone } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
-import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,21 +26,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all ${
-        isScrolled
-          ? 'glass backdrop-blur-md border-b border-white/20 h-14'
-          : 'bg-transparent h-16'
-      }`}
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 ios-nav ${
+      isScrolled 
+        ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-full">
+        <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
           <div className="flex items-center">
-            <button
+            <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-2xl font-bold bg-clip-text text-transparent" style={{ backgroundImage: 'var(--accent-gradient)' }}
+              className="text-2xl font-bold text-gradient ios-button"
             >
               SOS פרויקטים
             </button>
@@ -49,27 +46,27 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8 space-x-reverse">
-            <button
+            <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-foreground hover:text-primary font-medium transition-colors"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               בית
             </button>
-            <button
+            <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary font-medium transition-colors"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               שירותים
             </button>
-            <button
+            <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-foreground hover:text-primary font-medium transition-colors"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               ביקורות
             </button>
-            <button
+            <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary font-medium transition-colors"
+              className="text-foreground hover:text-primary ios-nav font-medium"
             >
               צור קשר
             </button>
@@ -77,36 +74,35 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <HeroButton
-              variant="outline"
+            <HeroButton 
+              variant="outline" 
               size="sm"
               onClick={() => scrollToSection('contact')}
-              className=""
+              className="ios-button"
             >
               <div className="w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/20 flex items-center justify-center mr-2">
                 <Phone className="w-4 h-4" />
               </div>
               צור קשר
             </HeroButton>
-            <HeroButton
-              variant="whatsapp"
+            <HeroButton 
+              variant="whatsapp" 
               size="sm"
               onClick={() => window.open(whatsappUrl, '_blank')}
-              className=""
+              className="ios-button"
             >
               <div className="w-6 h-6 bg-green-400/10 backdrop-blur-sm rounded-lg border border-green-400/20 flex items-center justify-center mr-2">
                 <MessageCircle className="w-4 h-4" />
               </div>
               וואטסאפ
             </HeroButton>
-            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="w-10 h-10 glass rounded-xl text-foreground transition-all duration-300 flex items-center justify-center"
+              className="w-10 h-10 bg-card/40 backdrop-blur-sm rounded-xl border border-border/30 text-foreground hover:text-primary hover:bg-card/60 hover:border-primary/30 ios-nav transition-all duration-300 flex items-center justify-center"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -114,11 +110,11 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden overflow-hidden transition-all duration-200 ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden ios-nav overflow-hidden ${
+          isOpen ? 'max-h-96 opacity-100 ios-nav-enter' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-4 space-y-4 glass rounded-b-2xl mt-2">
-            <button
+          <div className="py-4 space-y-4 bg-background/95 backdrop-blur-lg rounded-b-2xl border border-border mt-2 ios-modal">
+            <button 
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setIsOpen(false);
@@ -127,7 +123,7 @@ const Navbar = () => {
             >
               בית
             </button>
-            <button
+            <button 
               onClick={() => scrollToSection('services')}
               className="block w-full text-right px-4 py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
@@ -146,36 +142,35 @@ const Navbar = () => {
               צור קשר
             </button>
             
-            <div className="flex flex-col gap-3 px-4 pt-4 border-t border-white/20">
-              <HeroButton
-                variant="outline"
+            <div className="flex flex-col gap-3 px-4 pt-4 border-t border-border">
+              <HeroButton 
+                variant="outline" 
                 size="sm"
                 onClick={() => {
                   scrollToSection('contact');
                   setIsOpen(false);
                 }}
-                className="w-full"
+                className="w-full ios-button"
               >
                 <div className="w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/20 flex items-center justify-center mr-2">
                   <Phone className="w-4 h-4" />
                 </div>
                 צור קשר
               </HeroButton>
-              <HeroButton
-                variant="whatsapp"
+              <HeroButton 
+                variant="whatsapp" 
                 size="sm"
                 onClick={() => {
                   window.open(whatsappUrl, '_blank');
                   setIsOpen(false);
                 }}
-                className="w-full"
+                className="w-full ios-button"
               >
                 <div className="w-6 h-6 bg-green-400/10 backdrop-blur-sm rounded-lg border border-green-400/20 flex items-center justify-center mr-2">
                   <MessageCircle className="w-4 h-4" />
                 </div>
                 וואטסאפ
               </HeroButton>
-              <ThemeToggle className="mt-2" />
             </div>
           </div>
         </div>
